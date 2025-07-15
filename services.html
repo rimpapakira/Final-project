@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/services.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Up Section -->
+    <header class="header-up">
+      <div class="container">
+        <div class="top-nav-main">
+          <div class="top-nav-left">
+            <a href="">
+              <img src="./assets/email.png" alt="" />
+              Email Address: AutocarX@gmail.com
+            </a>
+
+            <a href="">
+              <img src="./assets/call.png" alt="" />
+              Contact Number: +91-7686860145
+            </a>
+          </div>
+          <div class="top-nav-right">
+            <div class="dropdown-container">
+              <div class="dropdown-toggle" onclick="toggleDropdown()">
+                <img src="./assets/location.png" alt="location-icon" />
+                <span
+                  >Location:
+                  <strong id="selectedLocation">Los Angeles</strong></span
+                >
+              </div>
+
+              <div class="location-modal hidden" id="locationModal">
+                <div class="location-header">
+                  <h2>Choose Your Location</h2>
+                  <span class="close-btn" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/los-angeles.png')"
+                    onclick="selectLocation('Los Angeles')"
+                  >
+                    <div class="location-name">Los Angeles</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/las-vegas.png')"
+                    onclick="selectLocation('Las Vegas')"
+                  >
+                    <div class="location-name">Las Vegas</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/miami.png')"
+                    onclick="selectLocation('Miami')"
+                  >
+                    <div class="location-name">Miami</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/san-francisco.png')"
+                    onclick="selectLocation('San Francisco')"
+                  >
+                    <div class="location-name">San Francisco</div>
+                  </div>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/wallington.png')"
+                    onclick="selectLocation('Wallington')"
+                  >
+                    <div class="location-name">Wallington</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/new-york.png')"
+                    onclick="selectLocation('New York')"
+                  >
+                    <div class="location-name">New York</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/lockdown.png')"
+                    onclick="selectLocation('Lockdown')"
+                  >
+                    <div class="location-name">Lockdown</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/boat.png')"
+                    onclick="selectLocation('Boat')"
+                  >
+                    <div class="location-name">Boat</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header Section -->
+    <header class="header-section">
+      <div class="container">
+        <nav>
+          <div class="nav-logo">
+            <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+          </div>
+          <label for="dash" class="icon">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+
+          <div class="nav-right">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="./parts.html">Shop now</a>
+              </li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./services.html">Blog</a></li>
+            </ul>
+            <div class="nav-btn">
+              <div class="search">
+                <a href=""><img src="./assets/Search.png" alt="" /></a>
+              </div>
+              <div class="cart">
+                <a href=""><img src="./assets/cart.png" alt="" /></a>
+              </div>
+            </div>
+            <a class="nav-btn1" href="./login.html">Log In</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Banner Section -->
+    <section class="banner-sec">
+      <div class="container">
+        <h1>Service</h1>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services-sec">
+      <div class="container">
+        <h4>Services</h4>
+        <h2>We offer a wide range<br />of car services</h2>
+        <div class="row">
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/General-Service.png" alt="" />
+                </div>
+                <h3>General Service</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Wheels-an-Tyres.png" alt="" />
+                </div>
+                <h3>Wheels an Tyres</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Fuel-Exchange.png" alt="" />
+                </div>
+                <h3>Fuel Exchange</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Vechicle-Maintenance.png" alt="" />
+                </div>
+                <h3>Vehicle Maintenance</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Battery-Check.png" alt="" />
+                </div>
+                <h3>Battery Change</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                et venenatis commodo.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Oil-and-Break-Check.png" alt="" />
+                </div>
+                <h3>Oil and Break Checks</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                et venenatis commodo.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Affordable-Price.png" alt="" />
+                </div>
+                <h3>Affordable Price</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Car-Diagonostic.png" alt="" />
+                </div>
+                <h3>Car Diagonostic</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-img">
+                  <img src="./assets/Tire-Fix-&-Replacements.png" alt="" />
+                </div>
+                <h3>Tire Fix & Replacements</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. A odio venenatis vitae
+                ut venenatis commodo. Nisi ultricies porta sociis lorem blandit.
+                Neque mollis.
+              </p>
+              <a href="#">See More <img src="./assets/Arrow.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="schedule">Schedule an Appointment</button>
+          <button class="browse">Browse Service</button>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="choose-sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="choose-img">
+              <img src="./assets/why-us-main.png" alt="" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="why-content">
+              <h3>Why Us</h3>
+              <h2>Why Choose Us</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Massa varius ultrices
+                pretium fusce massa maecenas. Arcu amet nunc pharetra proin.
+              </p>
+
+              <div class="features">
+                <div class="feature">
+                  <img src="./assets/Experienced-Machanics.png" alt="" />
+                  <div class="feature-text">
+                    <h4>Experienced Mechanics</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore
+                      magna.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature">
+                  <img src="./assets/Quality-Service.png" alt="" />
+                  <div class="feature-text">
+                    <h4>24/7 Quality Service</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore
+                      magna.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature">
+                  <img src="./assets/10+years-of-experience.png" alt="" />
+                  <div class="feature-text">
+                    <h4>10+ years of experience</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore
+                      magna.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button>Schedule an Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Plan Section -->
+    <section class="plan-sec">
+      <div class="container">
+        <h4>Packages</h4>
+        <h2>Choose the Right Plan for Your Car</h2>
+
+        <div class="row">
+          <!-- Basic Plan -->
+          <div class="col-4">
+            <div class="card2">
+              <h3>Basic Plan</h3>
+              <span>Quarterly</span>
+              <hr />
+              <div class="price">$99<small>/ 3 months</small></div>
+              <ul class="features">
+                <li><img src="./assets/check.png" alt="" /> Basic Car Wash</li>
+                <li><img src="./assets/check.png" alt="" /> Engine Checkup</li>
+                <li>
+                  <img src="./assets/check.png" alt="" /> Tire Pressure Check
+                </li>
+                <li>
+                  <img src="./assets/check.png" alt="" /> Interior Cleaning
+                </li>
+              </ul>
+              <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+          </div>
+          <!-- Standard Plan -->
+          <div class="col-4">
+            <div class="card2">
+              <h3>Standard Plan</h3>
+              <span>Bi-Monthly</span>
+              <hr />
+              <div class="price">$124<small>/ 2 months</small></div>
+              <ul class="features">
+                <li>
+                  <img src="./assets/check.png" alt="" /> All Basic Features
+                </li>
+                <li><img src="./assets/check.png" alt="" /> Full Body Wash</li>
+                <li><img src="./assets/check.png" alt="" /> Oil Top-up</li>
+                <li><img src="./assets/check.png" alt="" /> Brake Check</li>
+              </ul>
+              <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+          </div>
+          <!-- Premium Plan -->
+          <div class="col-4">
+            <div class="card2">
+              <h3>Premium Plan</h3>
+              <span>Monthly</span>
+              <hr />
+              <div class="price">$189<small>/ month</small></div>
+              <ul class="features">
+                <li>
+                  <img src="./assets/check.png" alt="" /> All Standard Features
+                </li>
+                <li>
+                  <img src="./assets/check.png" alt="" /> Free Pickup an Drop
+                </li>
+                <li>
+                  <img src="./assets/check.png" alt="" /> AC & Battery Check
+                </li>
+                <li><img src="./assets/check.png" alt="" /> 24x7 Support</li>
+              </ul>
+              <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Slider Section -->
+    <section class="slider-section">
+      <div class="container">
+        <div class="hdr-top">
+          <h2>We Repair All Makes of <span>Automobiles</span></h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Cras sed et in . At placerat.</p>
+        </div>
+        <div class="slider-container">
+          <div class="slider-track" id="logoTrack">
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-1.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img
+                  src="./assets/logo-2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-3.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-4.png" alt="" />
+              </div>
+            </div>
+             <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-5.png" alt="" />
+              </div>
+            </div>
+             <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-6.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="footer-cont">
+              <div class="nav-logo">
+                <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+              </div>
+              <p class="footer-p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                aliquam justo nec ligula eleifend efficitur.
+              </p>
+              <h2>Subscribe to our newsletter</h2>
+              <form class="footer-form">
+                <input type="email" placeholder="Enter Your E-Mail" required />
+                <button type="submit" class="footer-btn">Subscribe Now</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-3">
+            <h4 class="list-heading">Quick Links</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px">
+              <li style="margin-bottom: 8px"><a href="">About Us</a></li>
+              <li style="margin-bottom: 8px">
+                <a href="">Contact Us</a>
+              </li>
+              <li style="margin-bottom: 8px"><a href="">Spare Parts</a></li>
+              <li style="margin-bottom: 8px"><a href="">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h4 class="list-heading">Address</h4>
+            <p style="font-size: 14px; line-height: 1.6">
+              (323) 661-3953<br />
+              3506 Madera Ave<br />
+              Los Angeles, California(CA), 90039
+            </p>
+          </div>
+          <div class="col-3">
+            <h4 class="list-heading">Stay Connected</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px">
+              <li
+                style="
+                  margin-bottom: 8px;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span style="color: #f44336; font-size: 16px">&#9679;</span>
+                Facebook
+              </li>
+              <li
+                style="
+                  margin-bottom: 8px;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span style="color: #f44336; font-size: 16px">&#9679;</span>
+                Instagram
+              </li>
+              <li
+                style="
+                  margin-bottom: 8px;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span style="color: #f44336; font-size: 16px"></span>
+                YouTube
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          style="
+            max-width: 1200px;
+            margin: auto;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #aaa;
+          "
+        >
+          <p>&copy; 2025 Autocar X. All rights reserved.</p>
+          <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Privacy Policy</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Terms of Service</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Cookie Settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script src="./js/services.js"></script>
+  </body>
+</html>

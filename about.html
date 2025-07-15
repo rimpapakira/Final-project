@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/about.css" />
+  </head>
+  <body>
+    <!-- Header Up Section -->
+    <header class="header-up">
+      <div class="container">
+        <div class="top-nav-main">
+          <div class="top-nav-left">
+            <a href="">
+              <img src="./assets/email.png" alt="" />
+              Email Address: AutocarX@gmail.com
+            </a>
+
+            <a href="">
+              <img src="./assets/call.png" alt="" />
+              Contact Number: +91-7686860145
+            </a>
+          </div>
+          <div class="top-nav-right">
+            <div class="dropdown-container">
+              <div class="dropdown-toggle" onclick="toggleDropdown()">
+                <img src="./assets/location.png" alt="location-icon" />
+                <span
+                  >Location:
+                  <strong id="selectedLocation">Los Angeles</strong></span
+                >
+              </div>
+
+              <div class="location-modal hidden" id="locationModal">
+                <div class="location-header">
+                  <h2>Choose Your Location</h2>
+                  <span class="close-btn" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/los-angeles.png')"
+                    onclick="selectLocation('Los Angeles')"
+                  >
+                    <div class="location-name">Los Angeles</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/las-vegas.png')"
+                    onclick="selectLocation('Las Vegas')"
+                  >
+                    <div class="location-name">Las Vegas</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/miami.png')"
+                    onclick="selectLocation('Miami')"
+                  >
+                    <div class="location-name">Miami</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/san-francisco.png')"
+                    onclick="selectLocation('San Francisco')"
+                  >
+                    <div class="location-name">San Francisco</div>
+                  </div>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/wallington.png')"
+                    onclick="selectLocation('Wallington')"
+                  >
+                    <div class="location-name">Wallington</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/new-york.png')"
+                    onclick="selectLocation('New York')"
+                  >
+                    <div class="location-name">New York</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/lockdown.png')"
+                    onclick="selectLocation('Lockdown')"
+                  >
+                    <div class="location-name">Lockdown</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/boat.png')"
+                    onclick="selectLocation('Boat')"
+                  >
+                    <div class="location-name">Boat</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header Section -->
+    <header class="header-section">
+      <div class="container">
+        <nav>
+          <div class="nav-logo">
+            <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+          </div>
+          <label for="dash" class="icon">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+
+          <div class="nav-right">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="./parts.html">Shop now</a>
+              </li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./services.html">Blog</a></li>
+            </ul>
+            <div class="nav-btn">
+              <div class="search">
+                <a href=""><img src="./assets/Search.png" alt="" /></a>
+              </div>
+              <div class="cart">
+                <a href="./cart.html"><img src="./assets/cart.png" alt="" /></a>
+              </div>
+            </div>
+            <a class="nav-btn1" href="./login.html">Log In</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Banner Section -->
+    <section class="banner-sec">
+      <div class="container">
+        <div class="row">
+          <h1 style="text-align: center">About Us</h1>
+        </div>
+      </div>
+    </section>
+    <!-- Mission Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="section-title">Our Journey</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Ac nisi nunc turpis sit
+              commodo turpis mi. Ipsum mattis eget nisi purus ullamcorper eget
+              adipiscing. Aliquam leo a sed adipiscing vulputate platea.
+              Molestie tempor mauris nulla luctus venenatis pretium. Magna amet
+              habitant nunc nec enim scelerisque at malesuada. Amet sem iaculis
+              dignissim faucibus amet netus nulla ut sed. Est mi lacus eget
+              nisi. Nisi leo sapien.
+            </p>
+            <h4 class="section-title mt-4">Our Mission</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Commodo odio ac blandit in
+              eu lectus cum sed ut. Fringilla vitae orci morbi magna parturient
+              libero neque ultricies. Morbi risus urna orci cras vitae facilisi
+              at. Morbi ultricies adipiscing aliquet tristique eget. Eget
+              malesuada ultricies id amet. Posuere elementum lobortis libero
+              integer tellus. Sed leo commodo lobortis amet duis suspendisse
+              lobortis dictumst orci. Sit lectus.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="./assets/image.png"
+              class="img-fluid rounded"
+              alt="Team image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <section class="record-sec py-5">
+      <div class="container text-center">
+        <p class="text-danger">Achievements</p>
+        <h4 class="section-title">Our Track Record Speaks for Itself</h4>
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="achievement-box">
+              <div class="icon1">
+                <img src="./assets/calendar.png" alt="" />
+              </div>
+              <h5>10+ Years of Excellence</h5>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="achievement-box">
+              <div class="icon1"><img src="./assets/happy.png" alt="" /></div>
+              <h5>50k+ Happy Clients</h5>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="achievement-box">
+              <div class="icon1"><img src="./assets/star.png" alt="" /></div>
+              <h5>99% Customer Satisfaction</h5>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Founder Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="./assets/founder.png"
+              class="img-fluid rounded"
+              alt="Founder"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4 class="section-title">Meet Our Founder</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Mus facilisi gravida
+              pharetra morbi netus. Eget ultrices laoreet ut urna orci. Duis et
+              adipiscing diam mauris est auctor dictum est. Ligula pretium
+              pharetra vitae natoque tellus pulvinar mauris nunc. Elementum at
+              tortor sed nunc sit. Elementum eu et tempus lacus ipsum fermentum
+              etiam. Enim cursus in sit gravida auctor nullam sed ac amet
+              tristique egestas.
+            </p>
+            <h4 class="section-title mt-3">Leadership & Expertise</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Et ut eget ac eu feugiat
+              ut orci aliquam mus. Massa in faucibus quisque elit. Sodales
+              accumsan quis enim pretium. A morbi eu in lobortis at lectus arcu.
+              Mollis faucibus viverra fringilla senectus. Iaculis mauris mattis
+              nulla dolor suspendisse pharetra. Vitae enim sed congue diam diam.
+              Nulla adipiscing fermentum a sed phasellus suspendisse feugiat
+              congue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Location Section -->
+    <section class="partner-section">
+      <div class="container">
+        <div class="hdr-top">
+          <h3 class="title3">Our Locations</h3>
+        </div>
+        <div class="slider-container">
+          <div class="slider-track" id="logoTrack">
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/los-angeles-about.png" alt="Los Angeles" />
+                <div class="caption">Los Angeles</div>
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img
+                  src="./assets/san-francisco-about.png"
+                  alt="San Francisco"
+                />
+                <div class="caption">San Francisco</div>
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/las-vegas-about.png" alt="Las Vegas" />
+                <div class="caption">Las Vegas</div>
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/miami-about.png" alt="Miami" />
+                <div class="caption">Miami</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section class="testimonial-sec">
+      <div class="testimonial-header">
+        <h3>Testimonials</h3>
+        <h2>What our clients say about us</h2>
+      </div>
+      <div>
+        <div class="swiper" id="mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <img
+                  src="./assets/testimonials-pic-1.png"
+                  alt="Vanessa Taylor"
+                />
+                <h3>Vanessa Taylor</h3>
+                <p class="role">Rider</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
+                  velit vitae eget aliquam risus phasellus risus. Morbi eget
+                  semper.
+                </p>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <img
+                  src="./assets/testimonials-pic-2.png"
+                  alt="Evan Daugherty"
+                />
+                <h3>Evan Daugherty</h3>
+                <p class="role">Rider</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
+                  velit vitae eget aliquam risus phasellus risus. Morbi eget
+                  semper.
+                </p>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <img src="./assets/testimonials-pic-3.png" alt="Bryan Cogman" />
+                <h3>Bryan Cogman</h3>
+                <p class="role">Rider</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
+                  velit vitae eget aliquam risus phasellus risus. Morbi eget
+                  semper.
+                </p>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <img
+                  src="./assets/testimonials-pic-4.png"
+                  alt="David Benioff"
+                />
+                <h3>David Benioff</h3>
+                <p class="role">Rider</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
+                  velit vitae eget aliquam risus phasellus risus. Morbi eget
+                  semper.
+                </p>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="nav-logo">
+              <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+            </div>
+            <p class="footer-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              aliquam justo nec ligula eleifend efficitur.
+            </p>
+            <h2>Subscribe to our newsletter</h2>
+
+            <form class="mt-3">
+              <input
+                type="email"
+                class="form-control mb-2"
+                placeholder="Enter your E-mail"
+              />
+              <button class="btn btn-danger w-100">Subscribe Now</button>
+            </form>
+          </div>
+          <div class="col-md-2">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Spare Parts</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6>Address</h6>
+            <p>
+              3506 Madera Ave<br />Los Angeles, CA 90039<br />(233) 661-3953
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h6>Stay Connected</h6>
+            <p>
+              <i class="fab fa-facebook"></i> Facebook<br />
+              <i class="fab fa-instagram"></i> Instagram<br />
+              <i class="fab fa-youtube"></i> YouTube
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            max-width: 1200px;
+            margin: auto;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #aaa;
+          "
+        >
+          <p>&copy; 2025 Autocar X. All rights reserved.</p>
+          <div style="display: flex; gap: 15px; flex-wrap: wrap">
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Privacy Policy</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Terms of Service</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Cookie Settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script src="./js/about.js"></script>
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+  <body>
+    <!-- Header Up Section -->
+    <header class="header-up">
+      <div class="container">
+        <div class="top-nav-main">
+          <div class="top-nav-left">
+            <a href="">
+              <img src="./assets/email.png" alt="" />
+              Email Address: AutocarX@gmail.com
+            </a>
+
+            <a href="">
+              <img src="./assets/call.png" alt="" />
+              Contact Number: +91-7686860145
+            </a>
+          </div>
+          <div class="top-nav-right">
+            <div class="dropdown-container">
+              <div class="dropdown-toggle" onclick="toggleDropdown()">
+                <img src="./assets/location.png" alt="location-icon" />
+                <span
+                  >Location:
+                  <strong id="selectedLocation">Los Angeles</strong></span
+                >
+              </div>
+
+              <div class="location-modal hidden" id="locationModal">
+                <div class="location-header">
+                  <h2>Choose Your Location</h2>
+                  <span class="close-btn" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/los-angeles.png')"
+                    onclick="selectLocation('Los Angeles')"
+                  >
+                    <div class="location-name">Los Angeles</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/las-vegas.png')"
+                    onclick="selectLocation('Las Vegas')"
+                  >
+                    <div class="location-name">Las Vegas</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/miami.png')"
+                    onclick="selectLocation('Miami')"
+                  >
+                    <div class="location-name">Miami</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/san-francisco.png')"
+                    onclick="selectLocation('San Francisco')"
+                  >
+                    <div class="location-name">San Francisco</div>
+                  </div>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/wallington.png')"
+                    onclick="selectLocation('Wallington')"
+                  >
+                    <div class="location-name">Wallington</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/new-york.png')"
+                    onclick="selectLocation('New York')"
+                  >
+                    <div class="location-name">New York</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/lockdown.png')"
+                    onclick="selectLocation('Lockdown')"
+                  >
+                    <div class="location-name">Lockdown</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/boat.png')"
+                    onclick="selectLocation('Boat')"
+                  >
+                    <div class="location-name">Boat</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header Section -->
+    <header class="header-section">
+      <div class="container">
+        <nav>
+          <div class="nav-logo">
+            <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+          </div>
+          <label for="dash" class="icon">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+
+          <div class="nav-right">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="./parts.html">Shop now</a>
+              </li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./services.html">Blog</a></li>
+            </ul>
+            <div class="nav-btn">
+              <div class="search">
+                <a href=""><img src="./assets/Search.png" alt="" /></a>
+              </div>
+              <div class="cart">
+                <a href="./cart.html"><img src="./assets/cart.png" alt="" /></a>
+              </div>
+            </div>
+            <a class="nav-btn1" href="./login.html">Log In</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Banner Section -->
+    <section class="banner-sec">
+      <div class="container">
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+    <!--  -->
+    <!-- Form Section -->
+    <section class="form-section">
+      <div class="container">
+        <div class="text-center mb-4" data-aos="fade-up">
+          <h6 class="text-danger">Contact</h6>
+          <h2>Get in touch</h2>
+        </div>
+        <form class="row g-3" id="contactForm">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name*"
+              name="name"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email*"
+              name="email"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Phone Number*"
+              name="phone"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Query*"
+              name="query"
+              required
+            />
+          </div>
+          <div class="col-12">
+            <textarea
+              class="form-control"
+              placeholder="Message*"
+              rows="5"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-danger px-5">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+    <div
+      class="container py-5 d-md-flex justify-content-between align-items-start"
+      data-aos="fade-up"
+    >
+      <div class="mb-4">
+        <h5>Contact Address:</h5>
+        <p class="p-1">
+          We are Amend, A great car service and repair center in your state.<br />Service
+          provide 24/7
+        </p>
+        <p class="contact-info">
+          <img src="./assets/contact-mail.png" alt=""> info@autocarX.com
+        </p>
+        <p class="contact-info">
+          <img src="./assets/contact-call.png" alt=""> +971 12 345 6789
+        </p>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps?q=Los+Angeles&output=embed"
+          width="400"
+          height="250"
+          style="border: 0"
+          allowfullscreen=""
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="nav-logo">
+              <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+            </div>
+            <p class="footer-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              aliquam justo nec ligula eleifend efficitur.
+            </p>
+            <h2>Subscribe to our newsletter</h2>
+
+            <form class="mt-3">
+              <input
+                type="email"
+                class="form-control mb-2"
+                placeholder="Enter your E-mail"
+              />
+              <button class="btn btn-danger w-100">Subscribe Now</button>
+            </form>
+          </div>
+          <div class="col-md-2">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Spare Parts</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6>Address</h6>
+            <p>
+              3506 Madera Ave<br />Los Angeles, CA 90039<br />(233) 661-3953
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h6>Stay Connected</h6>
+            <p>
+              <i class="fab fa-facebook"></i> Facebook<br />
+              <i class="fab fa-instagram"></i> Instagram<br />
+              <i class="fab fa-youtube"></i> YouTube
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            max-width: 1200px;
+            margin: auto;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #aaa;
+          "
+        >
+          <p>&copy; 2025 Autocar X. All rights reserved.</p>
+          <div style="display: flex; gap: 15px; flex-wrap: wrap">
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Privacy Policy</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Terms of Service</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Cookie Settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS -->
+    <script src="./js/contact.js"></script>
+  
+  </body>
+</html>

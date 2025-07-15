@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "clarity city";
+  src: url(../assets/clarity-city/OpenType/ClarityCity-Regular.otf);
+}
+@font-face {
+  font-family: "clarity city bold";
+  src: url(../assets/clarity-city/OpenType/ClarityCity-SemiBold.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Common Class */
+:root {
+  --primary-color: #343434;
+  --secondary-color: #ff3434;
+  --third-color: #455a64;
+  --forth-color: #ffffff;
+}
+
+.cart-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+.product-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.total-box {
+  background-color: #f4f4f4;
+  padding: 10px 15px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.payment-btn {
+  background-color: var(--secondary-color);
+  border: none;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.payment-btn:hover {
+  background-color: var(--secondary-color);
+}

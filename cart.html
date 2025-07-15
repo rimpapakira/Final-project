@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/cart.css" />
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container cart-container">
+      <h3 class="fw-bold mb-4">Your Cart</h3>
+      <form id="checkoutForm">
+        <div class="row g-4">
+          <!-- Left Side -->
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="address" class="form-label">Enter Your Address</label>
+              <textarea
+                id="address"
+                class="form-control"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Select Payment Method</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymentMethod"
+                id="card"
+                value="Card"
+                required
+              />
+              <label class="form-check-label" for="card"
+                >Credit / Debit / ATM Card</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymentMethod"
+                id="upi"
+                value="UPI"
+              />
+              <label class="form-check-label" for="upi">UPI</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymentMethod"
+                id="paypal"
+                value="Paypal"
+              />
+              <label class="form-check-label" for="paypal">Paypal</label>
+            </div>
+            <div class="form-check mb-4">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="paymentMethod"
+                id="netbanking"
+                value="Net Banking"
+              />
+              <label class="form-check-label" for="netbanking"
+                >Net Banking</label
+              >
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div class="col-md-6">
+            <h6 class="fw-semibold mb-3">Your Products</h6>
+
+            <div class="product-box d-flex align-items-center gap-3">
+              <img
+                src="./assets/cart-img-1.png"
+                class="product-img"
+                alt="Product 1"
+              />
+              <div class="flex-grow-1">
+                <div><strong>Aluminum Spark Plug</strong></div>
+                <div class="text-muted" style="font-size: 0.875rem">
+                  Brand Name: KM Nature
+                </div>
+                <div
+                  class="input-group input-group-sm mt-2"
+                  style="width: 100px"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-minus"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control text-center qty-input"
+                    value="1"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-plus"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="text-muted" style="font-size: 0.8rem">
+                  Part ID: 6532498711
+                </div>
+                <div class="fw-bold product-price" data-price="50">$50.00</div>
+              </div>
+            </div>
+
+            <div class="product-box d-flex align-items-center gap-3">
+              <img
+                src="./assets/cart-img-2.png"
+                class="product-img"
+                alt="Product 2"
+              />
+              <div class="flex-grow-1">
+                <div><strong>Aluminum Spark Plug</strong></div>
+                <div class="text-muted" style="font-size: 0.875rem">
+                  Brand Name: Ostin
+                </div>
+                <div
+                  class="input-group input-group-sm mt-2"
+                  style="width: 100px"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-minus"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control text-center qty-input"
+                    value="1"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-plus"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="text-muted" style="font-size: 0.8rem">
+                  Part ID: 22556789
+                </div>
+                <div class="fw-bold product-price" data-price="40">$40.00</div>
+              </div>
+            </div>
+
+            <div class="total-box d-flex justify-content-between mt-3">
+              <div>Total Amount</div>
+              <div id="totalAmount">$90.00</div>
+            </div>
+
+            <button type="submit" class="payment-btn mt-3">Payment</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS -->
+    <script>
+      const plusBtns = document.querySelectorAll(".btn-plus");
+      const minusBtns = document.querySelectorAll(".btn-minus");
+      const qtyInputs = document.querySelectorAll(".qty-input");
+      const prices = document.querySelectorAll(".product-price");
+      const totalAmount = document.getElementById("totalAmount");
+
+      function updateTotal() {
+        let total = 0;
+        prices.forEach((priceEl, i) => {
+          const unitPrice = parseFloat(priceEl.dataset.price);
+          const qty = parseInt(qtyInputs[i].value);
+          total += unitPrice * qty;
+        });
+        totalAmount.textContent = `$${total.toFixed(2)}`;
+      }
+
+      plusBtns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          qtyInputs[i].value = parseInt(qtyInputs[i].value) + 1;
+          updateTotal();
+        });
+      });
+
+      minusBtns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          if (parseInt(qtyInputs[i].value) > 1) {
+            qtyInputs[i].value = parseInt(qtyInputs[i].value) - 1;
+            updateTotal();
+          }
+        });
+      });
+
+      document
+        .getElementById("checkoutForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!this.checkValidity()) {
+            this.reportValidity();
+            return;
+          }
+
+          const address = document.getElementById("address").value;
+          const payment = document.querySelector(
+            'input[name="paymentMethod"]:checked'
+          ).value;
+          alert(
+            `Order placed!\nAddress: ${address}\nPayment Method: ${payment}`
+          );
+        });
+
+      updateTotal();
+    </script>
+  </body>
+</html>

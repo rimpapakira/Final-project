@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "clarity city";
+  src: url(../assets/clarity-city/OpenType/ClarityCity-Regular.otf);
+}
+@font-face {
+  font-family: "clarity city bold";
+  src: url(../assets/clarity-city/OpenType/ClarityCity-SemiBold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #343434;
+  --secondary-color: #ff3434;
+  --third-color: #455a64;
+  --forth-color: #ffffff;
+}
+body{
+    font-family: clarity city;
+}
+.login-box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: var(--forth-color);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.login-box h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.login-box p {
+  color: var(--third-color);
+  margin-bottom: 20px;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--secondary-color);
+}
+.btn-login {
+  background-color: var(--secondary-color);
+  color: var(--forth-color);
+  font-weight: 600;
+}
+/* .btn-login:hover {
+  background-color: var(--secondary-color);
+} */
+.social-btn {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-btn img {
+  height: 20px;
+}
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spare Parts</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/parts.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Up Section -->
+    <header class="header-up">
+      <div class="container">
+        <div class="top-nav-main">
+          <div class="top-nav-left">
+            <a href="">
+              <img src="./assets/email.png" alt="" />
+              Email Address: AutocarX@gmail.com
+            </a>
+
+            <a href="">
+              <img src="./assets/call.png" alt="" />
+              Contact Number: +91-7686860145
+            </a>
+          </div>
+          <div class="top-nav-right">
+            <div class="dropdown-container">
+              <div class="dropdown-toggle" onclick="toggleDropdown()">
+                <img src="./assets/location.png" alt="location-icon" />
+                <span
+                  >Location:
+                  <strong id="selectedLocation">Los Angeles</strong></span
+                >
+              </div>
+
+              <div class="location-modal hidden" id="locationModal">
+                <div class="location-header">
+                  <h2>Choose Your Location</h2>
+                  <span class="close-btn" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/los-angeles.png')"
+                    onclick="selectLocation('Los Angeles')"
+                  >
+                    <div class="location-name">Los Angeles</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/las-vegas.png')"
+                    onclick="selectLocation('Las Vegas')"
+                  >
+                    <div class="location-name">Las Vegas</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/miami.png')"
+                    onclick="selectLocation('Miami')"
+                  >
+                    <div class="location-name">Miami</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/san-francisco.png')"
+                    onclick="selectLocation('San Francisco')"
+                  >
+                    <div class="location-name">San Francisco</div>
+                  </div>
+                </div>
+                <div class="location-row">
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/wallington.png')"
+                    onclick="selectLocation('Wallington')"
+                  >
+                    <div class="location-name">Wallington</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/new-york.png')"
+                    onclick="selectLocation('New York')"
+                  >
+                    <div class="location-name">New York</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/lockdown.png')"
+                    onclick="selectLocation('Lockdown')"
+                  >
+                    <div class="location-name">Lockdown</div>
+                  </div>
+                  <div
+                    class="location-card"
+                    style="background-image: url('./assets/boat.png')"
+                    onclick="selectLocation('Boat')"
+                  >
+                    <div class="location-name">Boat</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header Section -->
+    <header class="header-section">
+      <div class="container">
+        <nav>
+          <div class="nav-logo">
+            <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+          </div>
+          <label for="dash" class="icon">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+
+          <div class="nav-right">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="./parts.html">Shop now</a>
+              </li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./services.html">Blog</a></li>
+            </ul>
+            <div class="nav-btn">
+              <div class="search">
+                <a href=""><img src="./assets/Search.png" alt="" /></a>
+              </div>
+              <div class="cart">
+                <a href="./cart.html"><img src="./assets/cart.png" alt="" /></a>
+              </div>
+            </div>
+            <a class="nav-btn1" href="./login.html">Log In</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Banner Section -->
+    <section class="banner-sec">
+      <div class="container">
+        <h1>Spare Parts</h1>
+      </div>
+    </section>
+    <!--  -->
+    <section class="product-filter">
+      <div class="container">
+        <p class="subtitle">Products</p>
+        <h2 class="title">Products from our store</h2>
+        <div class="filter-bar">
+          <select>
+            <option>Select Brand</option>
+          </select>
+          <select>
+            <option>Select Model</option>
+          </select>
+          <select>
+            <option>Set Price Range</option>
+          </select>
+          <button>Search</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="container">
+        <div class="row" id="sidebarRow">
+          <div class="col3 sidebar" id="sidebar">
+            <div class="filter-group">
+              <h4>Categories</h4>
+              <div class="category-list">
+                <div>Automotive Accessories</div>
+                <div style="margin-left: 10px">
+                  <div>Vehicle Mats</div>
+                  <div>Tyre and Wheel</div>
+                  <div>Car Dashboard Acce...</div>
+                  <div>Vehicle Cleaners</div>
+                  <div>Vehicle Styling</div>
+                  <div class="link">Show 7 more</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Price</h4>
+              <div class="price-range">
+                <select>
+                  <option>Min</option>
+                </select>
+                <span>To</span>
+                <select>
+                  <option>$20</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Brand</h4>
+              <input type="text" placeholder="Search Brand" />
+              <label><input type="checkbox" /> Roarsh</label>
+              <label><input type="checkbox" /> Ottoroys</label>
+              <label><input type="checkbox" /> Microshine</label>
+              <label><input type="checkbox" /> Autogift</label>
+              <label><input type="checkbox" /> Aparo</label>
+              <div class="link">View More</div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Customer Ratings</h4>
+              <label><input type="checkbox" /> 4 Star or Above</label>
+              <label><input type="checkbox" /> 3 Star or Above</label>
+              <label><input type="checkbox" /> 2 Star or Above</label>
+              <label><input type="checkbox" /> 1 Star or Above</label>
+            </div>
+
+            <div class="filter-group">
+              <h4>Discount</h4>
+              <label><input type="checkbox" /> 50% or more</label>
+              <label><input type="checkbox" /> 40% or more</label>
+              <label><input type="checkbox" /> 30% or more</label>
+              <label><input type="checkbox" /> 20% or more</label>
+            </div>
+          </div>
+
+          <div class="col-9 cards">
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/wheels.png" alt="Product 1" />
+                  <p>27 CM Car Wheels</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$230.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/steering.png" alt="Product 2" />
+                  <p>Car Steering Black</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$95.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/brake-discs.png" alt="Product 4" />
+                  <p>Alloy Silver Disk Break</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$140.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/spark-plug.png" alt="Product 4" />
+                  <p>Aluminum Spark Plug</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$135.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/steering-black.png" alt="Product 4" />
+                  <p>Car Steering Black</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$95.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/oil-filter.png" alt="Product 4" />
+                  <p>Alloy Oil Filter</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$56.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/breaks-pad-2.png" alt="Product 4" />
+                  <p>Alloy Breaks pad 2 Set</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$68.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/spark-plug-1.png" alt="Product 4" />
+                  <p>Car Spark Plugs</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$58.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/spark-plug-2.png" alt="Product 4" />
+                  <p>Car Spark Plugs</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$58.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/breaks-pad-3.png" alt="Product 4" />
+                  <p>Alloy Breaks pad 2 Set</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$68.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/spark-plug-3.png" alt="Product 4" />
+                  <p>Car Spark Plugs</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$58.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/spark-plug-3.png" alt="Product 4" />
+                  <p>Car Spark Plugs</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$58.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/breaks-pad-3.png" alt="Product 4" />
+                  <p>Alloy Breaks pad 2 Set</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$68.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/spark-plug-3.png" alt="Product 4" />
+                  <p>Car Spark Plugs</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$58.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <img src="./assets/spark-plug-3.png" alt="Product 4" />
+                  <p>Car Spark Plugs</p>
+                  <div style="display: flex; justify-content: space-between">
+                    <p class="price">$58.00</p>
+                    <p class="stars">★★★★★</p>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="view-details">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Slider Section -->
+    <section class="slider-section">
+      <div class="container">
+        <div class="hdr-top">
+          <h2>We Repair All Makes of <span>Automobiles</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Cras sed et in . At
+            placerat.
+          </p>
+        </div>
+        <div class="slider-container">
+          <div class="slider-track" id="logoTrack">
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-1.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-2.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-3.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-4.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-5.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="location-card">
+                <img src="./assets/logo-6.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="footer-cont">
+              <div class="nav-logo">
+                <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
+              </div>
+              <p class="footer-p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                aliquam justo nec ligula eleifend efficitur.
+              </p>
+              <h2>Subscribe to our newsletter</h2>
+              <form class="footer-form">
+                <input type="email" placeholder="Enter Your E-Mail" required />
+                <button type="submit" class="footer-btn">Subscribe Now</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-3">
+            <h4 class="list-heading">Quick Links</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px">
+              <li style="margin-bottom: 8px"><a href="">About Us</a></li>
+              <li style="margin-bottom: 8px">
+                <a href="">Contact Us</a>
+              </li>
+              <li style="margin-bottom: 8px"><a href="">Spare Parts</a></li>
+              <li style="margin-bottom: 8px"><a href="">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h4 class="list-heading">Address</h4>
+            <p style="font-size: 14px; line-height: 1.6">
+              (323) 661-3953<br />
+              3506 Madera Ave<br />
+              Los Angeles, California(CA), 90039
+            </p>
+          </div>
+          <div class="col-3">
+            <h4 class="list-heading">Stay Connected</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px">
+              <li
+                style="
+                  margin-bottom: 8px;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span style="color: #f44336; font-size: 16px">&#9679;</span>
+                Facebook
+              </li>
+              <li
+                style="
+                  margin-bottom: 8px;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span style="color: #f44336; font-size: 16px">&#9679;</span>
+                Instagram
+              </li>
+              <li
+                style="
+                  margin-bottom: 8px;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span style="color: #f44336; font-size: 16px"></span>
+                YouTube
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          style="
+            max-width: 1200px;
+            margin: auto;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #aaa;
+          "
+        >
+          <p>&copy; 2025 Autocar X. All rights reserved.</p>
+          <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Privacy Policy</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Terms of Service</a
+            >
+            <a href="#" style="color: #aaa; text-decoration: none"
+              >Cookie Settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./js/services.js"></script>
+    <script>
+      function toggleSidebar() {
+        const row = document.getElementById("sidebarRow");
+        row.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
