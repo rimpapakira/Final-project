@@ -37,3 +37,8 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   alert("Thank you! Your message has been successfully sent.");
   this.reset();
 });
+
+// 
+
+function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });}

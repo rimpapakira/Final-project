@@ -86,6 +86,7 @@ window.addEventListener("resize", updateSlider);
 updateSlider();
 startAutoSlide();
 
-//AOS
+// 
 
-
+function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });}

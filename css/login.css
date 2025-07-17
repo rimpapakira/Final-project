@@ -21,6 +21,11 @@
 body{
     font-family: clarity city;
 }
+a{
+  text-wrap: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
 .login-box {
   max-width: 400px;
   margin: 50px auto;
@@ -66,7 +71,10 @@ body{
   font-size: 20px;
   cursor: pointer;
 }
-.login-btn {
+.login-btn{
+  border: none;
+}
+.login-btn >a {
   border: 2px solid var(--secondary-color);
   display: flex;
   justify-content: center;

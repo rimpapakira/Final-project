@@ -26,4 +26,8 @@ const track = document.getElementById("logoTrack");
 const logos = track.innerHTML;
 track.innerHTML += logos;
 
-//
+// 
+
+function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });}
+

@@ -23,9 +23,6 @@ body {
   overflow-x: hidden;
   background-color: #d9d9d9;
 }
-body::-webkit-scrollbar {
-  display: none;
-}
 .container {
   max-width: 1360px;
   width: 100%;
@@ -47,6 +44,9 @@ a {
   text-wrap: nowrap;
   text-decoration: none;
   display: inline-block;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Header Up Section */
@@ -190,6 +190,7 @@ a {
 .hidden {
   display: none;
 }
+
 /* Header Section*/
 .header-section {
   padding: 21px 0;
@@ -204,7 +205,7 @@ nav,
   align-items: center;
 }
 nav {
-  gap: 80px;
+  gap: 20px;
 }
 .nav-right {
   flex-grow: 1;
@@ -231,6 +232,7 @@ ul > li > a {
 ul > li > a:hover {
   background-position: 100% 100%;
 }
+
 .nav-btn {
   gap: 22px;
   justify-content: center;
@@ -239,42 +241,6 @@ ul > li > a:hover {
   max-width: 312px;
   min-height: 28px;
 }
-.nav-btn1 {
-  display: inline-block;
-  padding: 19px 68px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--forth-color);
-  background: var(--secondary-color);
-  border-radius: 5px;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-}
-
-.nav-btn1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: skewX(-20deg);
-  transition: left 0.6s ease;
-}
-
-.nav-btn1:hover::before {
-  left: 125%;
-}
-
-.nav-btn1:hover {
-  background-color: #ffffff;
-  color: var(--secondary-color);
-  box-shadow: 0 0 20px rgba(255, 52, 52, 0.5);
-}
-
 .nav-logo > a > img {
   width: 100%;
   height: 100%;
@@ -308,15 +274,37 @@ ul > li > a:hover {
 .icon {
   display: none;
 }
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.profile span {
+  display: inline;
+}
+
+.profile img {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  object-fit: cover;
+  cursor: pointer;
+}
 /* Banner Section */
 .banner-sec {
-  background: url("../assets/about-img.png") center/cover no-repeat;
-  height: 400px;
-  color: white;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url(../assets/contact.png) no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  overflow: hidden;
+  text-align: center;
+  /* margin-bottom: 100px; */
 }
 .banner-sec::after {
   content: "";
@@ -328,222 +316,78 @@ ul > li > a:hover {
   background-color: rgba(0, 0, 0, 0.3); /* optional dark overlay */
   z-index: 1;
 }
-
 h1 {
+  color: var(--forth-color);
   font-size: 65px;
   font-weight: bold;
   z-index: 2;
+  position: sticky;
 }
-
-/* Mission Section */
-.section-title {
-  font-weight: bold;
-  margin-bottom: 20px;
+/*  */
+.form-section {
+  background: #f4f4f4;
+  padding: 50px 0;
 }
-.text > h4 {
-  font-size: 36px;
-  color: var(--primary-color);
-}
-.text > p {
-  color: var(--third-color);
-}
-
-.achievement-box {
-  background: var(--forth-color);
-  border-radius: 8px;
-  padding: 25px 20px;
-  margin: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  text-align: center;
-  max-width: 330px;
-  margin-inline: auto;
-}
-
-.achievement-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.record-sec {
-  background-color: #d9d9d9;
-}
-.testimonial-card {
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  /* height: 100%; */
-}
-
-/*  Section  */
-.partner-section {
-  padding: 40px 0;
-}
-
-.slider-container {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  padding-bottom: 80px;
-}
-
-.slider-track {
-  display: inline-block;
-  animation: scroll 10s linear infinite;
-}
-
-.logo {
-  display: inline-block;
-  width: 290px;
-  height: 160px;
-  margin: 0 20px;
-}
-.location-card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  margin: 0 10px;
-}
-.location-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-.location-card .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 5px 10px;
+.submit-btn {
+  padding: 10px;
+  background: var(--secondary-color);
+  color: var(--forth-color);
+  border: none;
   border-radius: 4px;
-  font-size: 16px;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-.title3 {
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 50px;
-  line-height: auto;
-  letter-spacing: 2.1px;
-  font-weight: 500;
-}
-/* Testimonial Section */
-
-.testimonial-header > h3 {
-  color: var(--secondary-color);
   font-weight: 600;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 10px;
 }
-.testimonial-header > h2 {
-  font-family: "clarity city bold";
-  color: var(--primary-color);
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 40px;
-}
-
-.testimonial-card {
-  flex: 0 0 100%;
-  max-width: 500px;
-  padding: 20px;
-  text-align: center;
-  background: var(--forth-color);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.testimonial-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.testimonial-card p.role {
-  font-size: 14px;
-  color: var(--third-color);
-  margin-bottom: 15px;
-}
-
-.testimonial-card p.text {
-  font-size: 14px;
-  color: var(--third-color);
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-.stars {
-  color: var(--secondary-color);
-  font-size: 16px;
-}
-
-.review-section {
-  position: relative;
-  padding-bottom: 250px;
-}
-.swiper {
-  width: 100%;
-  height: 420px !important;
-  overflow: hidden;
-}
-.swiper-wrapper {
-  /* margin-top: 100px; */
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  transition-property: transform;
-  transition-timing-function: var(
-    --swiper-wrapper-transition-timing-function,
-    initial
-  );
-  box-sizing: content-box;
-}
-.swiper-slide {
-  text-align: center;
+.submit-btn {
+  display: inline-block;
+  padding: 19px 68px;
   font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 639px;
-}
-.customer-card {
-  background: white;
-  width: 100%;
-  padding: 75px 25px 41px;
+  font-weight: 600;
+  color: var(--forth-color);
+  background: var(--secondary-color);
+  border-radius: 5px;
+  text-decoration: none;
   position: relative;
-  border-radius: 40px 8px 40px 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-/* Footer Section */
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.submit-btn:hover::before {
+  left: 125%;
+}
+
+.submit-btn:hover {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(255, 52, 52, 0.5);
+}
+
+.contact-info img {
+  max-width: 50px;
+}
+
 .footer {
-  background-color: #111;
+  background: #1c1c1c;
   color: #ccc;
   padding: 40px 0;
 }
 
-.footer a {
-  color: #ccc;
-  text-decoration: none;
+.footer h5 {
+  color: white;
 }
 
-.footer a:hover {
-  text-decoration: underline;
+.footer input {
+  margin-bottom: 10px;
 }
 .footer-btn {
   padding: 10px;
@@ -632,6 +476,7 @@ h1 {
 .float-btn:hover {
   background-color: var(--secondary-color);
 }
+
 @media screen and (max-width: 1200px) {
   /* Header Section */
 
@@ -654,11 +499,11 @@ h1 {
     top: 100px;
     left: 0;
     right: 0;
+    z-index: 11;
     flex-direction: column;
     background-color: rgba(120, 108, 108, 0.3);
     backdrop-filter: blur(10px);
     padding: 10px 0;
-    z-index: 11;
     animation: dropdown 1 500ms forwards linear;
   }
   @keyframes dropdown {
@@ -677,5 +522,39 @@ h1 {
   }
   .nav-right > .nav-btn {
     flex-direction: column;
+  }
+   .profile {
+    order: 2;
+  }
+
+  .profile span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-right {
+    top: 130px;
+  }
+  .form-section {
+    padding: 30px 10px;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 200px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .footer .container > div {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .nav-right {
+    top: 170px;
   }
 }

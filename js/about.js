@@ -34,3 +34,8 @@ var swiper = new Swiper("#mySwiper", {
   spaceBetween: 30,
   mousewheel: true,
 });
+
+// 
+
+function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });}
