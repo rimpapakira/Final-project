@@ -47,15 +47,41 @@
 }
 
 .payment-btn {
-  background-color: var(--secondary-color);
-  border: none;
   width: 100%;
-  color: white;
   font-weight: 600;
   padding: 10px;
   border-radius: 5px;
 }
+.payment-btn {
+  display: inline-block;
+  font-size: 18px;
+  color: var(--forth-color);
+  background: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.payment-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.payment-btn:hover::before {
+  left: 125%;
+}
 
 .payment-btn:hover {
-  background-color: var(--secondary-color);
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(255, 52, 52, 0.5);
 }

@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header Up Section -->
@@ -155,14 +157,23 @@
     <!-- Banner Section -->
     <section class="banner-sec">
       <div class="container">
-        <h1>Spare Parts</h1>
+        <h1 data-aos="fade-down">Spare Parts</h1>
       </div>
     </section>
     <!--  -->
     <section class="product-filter">
       <div class="container">
-        <p class="subtitle">Products</p>
-        <h2 class="title">Products from our store</h2>
+        <p
+          class="subtitle"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          Products
+        </p>
+        <h2 class="title" data-aos="fade-up" data-aos-duration="4000">
+          Products from our store
+        </h2>
         <div class="filter-bar">
           <select>
             <option>Select Brand</option>
@@ -173,7 +184,7 @@
           <select>
             <option>Set Price Range</option>
           </select>
-          <button>Search</button>
+          <button class="filter-btn">Search</button>
         </div>
       </div>
     </section>
@@ -186,8 +197,16 @@
 
       <div class="container">
         <div class="row" id="sidebarRow">
-          <div class="col3 sidebar" id="sidebar">
+          <div
+            class="col3 sidebar"
+            id="sidebar"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <div class="filter-group">
+              <h5 style="font-size: 22px;">Filters</h5>
+              <hr style="margin-bottom: 15px;">
               <h4>Categories</h4>
               <div class="category-list">
                 <div>Automotive Accessories</div>
@@ -246,7 +265,7 @@
           <div class="col-9 cards">
             <div class="row">
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                   <img src="./assets/wheels.png" alt="Product 1" />
                   <p>27 CM Car Wheels</p>
                   <div style="display: flex; justify-content: space-between">
@@ -258,7 +277,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/steering.png" alt="Product 2" />
                   <p>Car Steering Black</p>
                   <div style="display: flex; justify-content: space-between">
@@ -270,7 +289,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/brake-discs.png" alt="Product 4" />
                   <p>Alloy Silver Disk Break</p>
                   <div style="display: flex; justify-content: space-between">
@@ -282,7 +301,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                   <img src="./assets/spark-plug.png" alt="Product 4" />
                   <p>Aluminum Spark Plug</p>
                   <div style="display: flex; justify-content: space-between">
@@ -294,7 +313,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/steering-black.png" alt="Product 4" />
                   <p>Car Steering Black</p>
                   <div style="display: flex; justify-content: space-between">
@@ -306,7 +325,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/oil-filter.png" alt="Product 4" />
                   <p>Alloy Oil Filter</p>
                   <div style="display: flex; justify-content: space-between">
@@ -318,7 +337,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                   <img src="./assets/breaks-pad-2.png" alt="Product 4" />
                   <p>Alloy Breaks pad 2 Set</p>
                   <div style="display: flex; justify-content: space-between">
@@ -330,7 +349,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/spark-plug-1.png" alt="Product 4" />
                   <p>Car Spark Plugs</p>
                   <div style="display: flex; justify-content: space-between">
@@ -342,7 +361,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/spark-plug-2.png" alt="Product 4" />
                   <p>Car Spark Plugs</p>
                   <div style="display: flex; justify-content: space-between">
@@ -354,7 +373,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                   <img src="./assets/breaks-pad-3.png" alt="Product 4" />
                   <p>Alloy Breaks pad 2 Set</p>
                   <div style="display: flex; justify-content: space-between">
@@ -366,7 +385,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/spark-plug-3.png" alt="Product 4" />
                   <p>Car Spark Plugs</p>
                   <div style="display: flex; justify-content: space-between">
@@ -378,7 +397,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/spark-plug-3.png" alt="Product 4" />
                   <p>Car Spark Plugs</p>
                   <div style="display: flex; justify-content: space-between">
@@ -390,7 +409,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                   <img src="./assets/breaks-pad-3.png" alt="Product 4" />
                   <p>Alloy Breaks pad 2 Set</p>
                   <div style="display: flex; justify-content: space-between">
@@ -402,7 +421,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/spark-plug-3.png" alt="Product 4" />
                   <p>Car Spark Plugs</p>
                   <div style="display: flex; justify-content: space-between">
@@ -414,7 +433,7 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-down">
                   <img src="./assets/spark-plug-3.png" alt="Product 4" />
                   <p>Car Spark Plugs</p>
                   <div style="display: flex; justify-content: space-between">
@@ -434,8 +453,14 @@
     <section class="slider-section">
       <div class="container">
         <div class="hdr-top">
-          <h2>We Repair All Makes of <span>Automobiles</span></h2>
-          <p>
+          <h2 data-aos="fade-up" data-aos-duration="4000">
+            We Repair All Makes of <span>Automobiles</span>
+          </h2>
+          <p
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             Lorem ipsum dolor sit amet consectetur. Cras sed et in . At
             placerat.
           </p>
@@ -518,39 +543,56 @@
           </div>
           <div class="col-3">
             <h4 class="list-heading">Stay Connected</h4>
-            <ul style="list-style: none; padding: 0; font-size: 14px">
-              <li
-                style="
-                  margin-bottom: 8px;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <span style="color: #f44336; font-size: 16px">&#9679;</span>
-                Facebook
+            <ul
+              class="footer-social"
+              style="list-style: none; padding: 0; font-size: 14px"
+            >
+              <li>
+                <a
+                  href=""
+                  style="
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                  ><span class="footer-icon"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></span>
+                  Facebook</a
+                >
               </li>
-              <li
-                style="
-                  margin-bottom: 8px;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <span style="color: #f44336; font-size: 16px">&#9679;</span>
-                Instagram
+              <li>
+                <a
+                  href=""
+                  style="
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                >
+                  <span class="footer-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></span>
+                  Instagram
+                </a>
               </li>
-              <li
-                style="
-                  margin-bottom: 8px;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <span style="color: #f44336; font-size: 16px"></span>
-                YouTube
+              <li>
+                <a
+                  href=""
+                  style="
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                >
+                  <span class="footer-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                  </span>
+                  YouTube</a
+                >
               </li>
             </ul>
           </div>
@@ -570,7 +612,7 @@
           "
         >
           <p>&copy; 2025 Autocar X. All rights reserved.</p>
-          <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <div style="display: flex; gap: 15px; flex-wrap: wrap">
             <a href="#" style="color: #aaa; text-decoration: none"
               >Privacy Policy</a
             >
@@ -585,6 +627,8 @@
       </div>
     </footer>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JS -->
     <script src="./js/services.js"></script>
     <script>
@@ -592,6 +636,8 @@
         const row = document.getElementById("sidebarRow");
         row.classList.toggle("active");
       }
+
+      AOS.init();
     </script>
   </body>
 </html>

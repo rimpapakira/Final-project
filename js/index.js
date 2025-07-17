@@ -86,5 +86,6 @@ window.addEventListener("resize", updateSlider);
 updateSlider();
 startAutoSlide();
 
-//
+//AOS
+
 

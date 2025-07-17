@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header Up Section -->
@@ -158,21 +160,24 @@
         <div class="row">
           <div class="col-6">
             <div class="banner-cont">
-              <h1>Take Care of your Car in the Garage.</h1>
-              <p>
+              <h1 data-aos="fade-down">Take Care of your Car in the Garage.</h1>
+              <p data-aos="fade-down-right">
                 At vitae commodo amet libero tortor blandit risus condimentum
                 mauris. Cras arcu tortor aenean turpis massa mauris ac mi
                 facilisi cursus aliquam a ac maecenas purus amet sapien id
                 suspendisse porttitor tempor at donec massa nibh massa urna et.
               </p>
-              <a href="" class="banner-btn">Schedule an appointment</a>
+              <a href="" class="banner-btn" data-aos="fade-up"
+                >Schedule an appointment</a
+              >
             </div>
           </div>
           <div class="col-6">
-            <div class="banner-form">
+            <div class="banner-form" data-aos="fade-up-left">
               <form action="">
                 <h3>Personal Details</h3>
-                <div class="personal"
+                <div
+                  class="personal"
                   style="
                     display: flex;
                     justify-content: space-between;
@@ -185,11 +190,11 @@
                 <input type="email" placeholder="Email Address (Optional)" />
 
                 <h3>Booking Details</h3>
-                <div>
+                <div class="input">
                   <input type="text" placeholder="Car Number" required />
                   <input type="text" placeholder="Service Details" required />
                 </div>
-                <div>
+                <div class="input">
                   <input type="datetime-local" required />
                   <select style="width: 43%" required>
                     <option value="">Location</option>
@@ -208,11 +213,19 @@
     <!-- Services Section -->
     <section class="services-sec">
       <div class="container">
-        <h4>Services</h4>
-        <h2>We offer a wide range<br />of car services</h2>
+        <h4
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          Services
+        </h4>
+        <h2 data-aos="fade-up" data-aos-duration="4000">
+          We offer a wide range<br />of car services
+        </h2>
         <div class="row">
           <div class="col-4">
-            <div class="card">
+            <div class="card" data-aos="fade-down-right">
               <div class="card-head">
                 <div class="card-img">
                   <img src="./assets/General-Service.png" alt="" />
@@ -228,7 +241,7 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <div class="card-head">
                 <div class="card-img">
                   <img src="./assets/Wheels-an-Tyres.png" alt="" />
@@ -244,7 +257,7 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card">
+            <div class="card" data-aos="fade-down-left">
               <div class="card-head">
                 <div class="card-img">
                   <img src="./assets/Fuel-Exchange.png" alt="" />
@@ -260,7 +273,7 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card">
+            <div class="card" data-aos="fade-down-right">
               <div class="card-head">
                 <div class="card-img">
                   <img src="./assets/Vechicle-Maintenance.png" alt="" />
@@ -276,7 +289,7 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <div class="card-head">
                 <div class="card-img">
                   <img src="./assets/Battery-Check.png" alt="" />
@@ -292,7 +305,7 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card">
+            <div class="card" data-aos="fade-down-left">
               <div class="card-head">
                 <div class="card-img">
                   <img src="./assets/Oil-and-Break-Check.png" alt="" />
@@ -308,7 +321,7 @@
             </div>
           </div>
         </div>
-        <div class="actions">
+        <div class="actions" data-aos="zoom-out-up">
           <button class="schedule">Schedule an Appointment</button>
           <button class="browse">Browse Service</button>
         </div>
@@ -319,21 +332,32 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <div class="choose-img">
+            <div
+              class="choose-img"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <img src="./assets/why-us-main.png" alt="" />
             </div>
           </div>
           <div class="col-6">
             <div class="why-content">
-              <h3>Why Us</h3>
-              <h2>Why Choose Us</h2>
-              <p>
+              <h3
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                Why Us
+              </h3>
+              <h2 data-aos="fade-up" data-aos-duration="4000">Why Choose Us</h2>
+              <p data-aos="fade-down-left">
                 Lorem ipsum dolor sit amet consectetur. Massa varius ultrices
                 pretium fusce massa maecenas. Arcu amet nunc pharetra proin.
               </p>
 
               <div class="features">
-                <div class="feature">
+                <div class="feature" data-aos="zoom-in-up">
                   <img src="./assets/Experienced-Machanics.png" alt="" />
                   <div class="feature-text">
                     <h4>Experienced Mechanics</h4>
@@ -345,7 +369,7 @@
                   </div>
                 </div>
 
-                <div class="feature">
+                <div class="feature" data-aos="zoom-in-up">
                   <img src="./assets/Quality-Service.png" alt="" />
                   <div class="feature-text">
                     <h4>24/7 Quality Service</h4>
@@ -357,7 +381,7 @@
                   </div>
                 </div>
 
-                <div class="feature">
+                <div class="feature" data-aos="zoom-in-up">
                   <img src="./assets/10+years-of-experience.png" alt="" />
                   <div class="feature-text">
                     <h4>10+ years of experience</h4>
@@ -370,7 +394,13 @@
                 </div>
               </div>
 
-              <button>Schedule an Appointment</button>
+              <button
+                class="schedule"
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+              >
+                Schedule an Appointment
+              </button>
             </div>
           </div>
         </div>
@@ -379,11 +409,19 @@
     <!-- Products Section -->
     <section class="products-sec">
       <div class="container">
-        <h3>Products</h3>
-        <h2>Products from our store</h2>
+        <h3
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          Products
+        </h3>
+        <h2 data-aos="fade-up" data-aos-duration="4000">
+          Products from our store
+        </h2>
         <div class="row">
           <div class="col-3">
-            <div class="card1">
+            <div class="card1" data-aos="zoom-in-right">
               <img src="./assets/breaks-pad.png" alt="Product 1" />
               <p>Alloy Breaks pad 2 Set</p>
               <div style="display: flex; justify-content: space-between">
@@ -395,7 +433,7 @@
             </div>
           </div>
           <div class="col-3">
-            <div class="card1">
+            <div class="card1" data-aos="zoom-in-down">
               <img src="./assets/wheels.png" alt="Product 2" />
               <p>27 CM Car Wheels</p>
               <div style="display: flex; justify-content: space-between">
@@ -407,7 +445,7 @@
             </div>
           </div>
           <div class="col-3">
-            <div class="card1">
+            <div class="card1" data-aos="zoom-in-down">
               <img src="./assets/steering.png" alt="Product 3" />
               <p>Car Steering Black</p>
               <div style="display: flex; justify-content: space-between">
@@ -419,7 +457,7 @@
             </div>
           </div>
           <div class="col-3">
-            <div class="card1">
+            <div class="card1" data-aos="zoom-in-down">
               <img src="./assets/brake-discs.png" alt="Product 4" />
               <p>Alloy Silver Disk Break</p>
               <div style="display: flex; justify-content: space-between">
@@ -431,7 +469,10 @@
             </div>
           </div>
         </div>
-        <div style="display: flex; justify-content: center">
+        <div
+          style="display: flex; justify-content: center"
+          data-aos="zoom-in-down"
+        >
           <button class="checkout-btn">Checkout Our All Product</button>
         </div>
       </div>
@@ -440,11 +481,13 @@
     <section class="step-sec">
       <div class="container">
         <h3>Steps</h3>
-        <h2>Service Your Car In<br />Just Three Easy Steps</h2>
+        <h2 data-aos="fade-up" data-aos-duration="4000">
+          Service Your Car In<br />Just Three Easy Steps
+        </h2>
 
         <div class="steps-container">
           <!-- Step 1 -->
-          <div class="step-card">
+          <div class="step-card" data-aos="zoom-in-right">
             <div class="step-header">
               <div class="step-number">1</div>
               <div class="step-line"></div>
@@ -461,7 +504,7 @@
           </div>
 
           <!-- Step 2 -->
-          <div class="step-card">
+          <div class="step-card" data-aos="zoom-in">
             <div class="step-header">
               <div class="step-number">2</div>
               <div class="step-line"></div>
@@ -481,7 +524,7 @@
           </div>
 
           <!-- Step 3 -->
-          <div class="step-card">
+          <div class="step-card" data-aos="zoom-in-left">
             <div class="step-header">
               <div class="step-number">3</div>
               <div class="step-line"></div>
@@ -503,13 +546,21 @@
     <!-- Plan Section -->
     <section class="plan-sec">
       <div class="container">
-        <h4>Packages</h4>
-        <h2>Choose the Right Plan for Your Car</h2>
+        <h4
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          Packages
+        </h4>
+        <h2 data-aos="fade-up" data-aos-duration="4000">
+          Choose the Right Plan for Your Car
+        </h2>
 
         <div class="row">
           <!-- Basic Plan -->
           <div class="col-4">
-            <div class="card2">
+            <div class="card2" data-aos="flip-left">
               <h3>Basic Plan</h3>
               <span>Quarterly</span>
               <hr />
@@ -529,7 +580,7 @@
           </div>
           <!-- Standard Plan -->
           <div class="col-4">
-            <div class="card2">
+            <div class="card2" data-aos="flip-up">
               <h3>Standard Plan</h3>
               <span>Bi-Monthly</span>
               <hr />
@@ -547,7 +598,7 @@
           </div>
           <!-- Premium Plan -->
           <div class="col-4">
-            <div class="card2">
+            <div class="card2" data-aos="flip-right">
               <h3>Premium Plan</h3>
               <span>Monthly</span>
               <hr />
@@ -573,11 +624,19 @@
     <!-- Record Section -->
     <section class="record-sec">
       <div class="container">
-        <h5>Achievements</h5>
-        <h2>Our Track Record Speaks for Itself</h2>
+        <h5
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          Achievements
+        </h5>
+        <h2 data-aos="fade-up" data-aos-duration="4000">
+          Our Track Record Speaks for Itself
+        </h2>
         <div class="row">
           <div class="col-4">
-            <div class="achievement-card">
+            <div class="achievement-card" data-aos="flip-left">
               <div class="icon1">
                 <img src="./assets/calendar.png" alt="" />
               </div>
@@ -589,7 +648,7 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="achievement-card">
+            <div class="achievement-card" data-aos="flip-up">
               <div class="icon1"><img src="./assets/happy.png" alt="" /></div>
               <h3>50k+ Happy Clients</h3>
               <p>
@@ -599,7 +658,7 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="achievement-card">
+            <div class="achievement-card" data-aos="flip-right">
               <div class="icon1"><img src="./assets/star.png" alt="" /></div>
               <h3>99% Customer Satisfaction</h3>
               <p>
@@ -614,14 +673,22 @@
     <!-- Testimonial Section -->
     <section class="testimonial-sec">
       <div class="testimonial-header">
-        <h3>Testimonials</h3>
-        <h2>What our clients say about us</h2>
+        <h3
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          Testimonials
+        </h3>
+        <h2 data-aos="fade-up" data-aos-duration="4000">
+          What our clients say about us
+        </h2>
       </div>
       <div>
         <div class="swiper" id="mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="testimonial-card">
+              <div class="testimonial-card" data-aos="flip-up">
                 <img
                   src="./assets/testimonials-pic-1.png"
                   alt="Vanessa Taylor"
@@ -637,7 +704,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="testimonial-card">
+              <div class="testimonial-card" data-aos="flip-down">
                 <img
                   src="./assets/testimonials-pic-2.png"
                   alt="Evan Daugherty"
@@ -653,7 +720,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="testimonial-card">
+              <div class="testimonial-card" data-aos="flip-up">
                 <img src="./assets/testimonials-pic-3.png" alt="Bryan Cogman" />
                 <h3>Bryan Cogman</h3>
                 <p class="role">Rider</p>
@@ -666,7 +733,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="testimonial-card">
+              <div class="testimonial-card" data-aos="flip-down">
                 <img
                   src="./assets/testimonials-pic-4.png"
                   alt="David Benioff"
@@ -682,7 +749,6 @@
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -698,8 +764,10 @@
           </div>
           <div class="col-6">
             <div class="newsletter-cont">
-              <h2>Stay Updated with Our Newsletter</h2>
-              <p>
+              <h2 data-aos="fade-up" data-aos-duration="4000">
+                Stay Updated with Our Newsletter
+              </h2>
+              <p data-aos="fade-left">
                 Lorem ipsum dolor sit amet consectetur. Volutpat aliquet
                 scelerisque tincidunt tellus viverra suspendisse nunc. Mi
                 ultrices arcu dui senectus aliquet pulvinar nisi. Senectus sit
@@ -711,8 +779,11 @@
                 placeholder="Enter Your E-Mail"
                 name=""
                 id=""
+                data-aos="zoom-out"
               />
-              <a class="" href="">Subscribe Now</a>
+              <a class="newsletter-btn" href="" data-aos="zoom-out"
+                >Subscribe Now</a
+              >
             </div>
           </div>
         </div>
@@ -759,39 +830,56 @@
           </div>
           <div class="col-3">
             <h4 class="list-heading">Stay Connected</h4>
-            <ul style="list-style: none; padding: 0; font-size: 14px">
-              <li
-                style="
-                  margin-bottom: 8px;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <span style="color: #f44336; font-size: 16px">&#9679;</span>
-                Facebook
+            <ul
+              class="footer-social"
+              style="list-style: none; padding: 0; font-size: 14px"
+            >
+              <li>
+                <a
+                  href=""
+                  style="
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                  ><span class="footer-icon"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></span>
+                  Facebook</a
+                >
               </li>
-              <li
-                style="
-                  margin-bottom: 8px;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <span style="color: #f44336; font-size: 16px">&#9679;</span>
-                Instagram
+              <li>
+                <a
+                  href=""
+                  style="
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                >
+                  <span class="footer-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></span>
+                  Instagram
+                </a>
               </li>
-              <li
-                style="
-                  margin-bottom: 8px;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <span style="color: #f44336; font-size: 16px"></span>
-                YouTube
+              <li>
+                <a
+                  href=""
+                  style="
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                >
+                  <span class="footer-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                  </span>
+                  YouTube</a
+                >
               </li>
             </ul>
           </div>
@@ -811,7 +899,7 @@
           "
         >
           <p>&copy; 2025 Autocar X. All rights reserved.</p>
-          <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <div style="display: flex; gap: 15px; flex-wrap: wrap">
             <a href="#" style="color: #aaa; text-decoration: none"
               >Privacy Policy</a
             >
@@ -828,6 +916,8 @@
 
     <!-- Splide JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JS -->
     <script src="./js/index.js"></script>
     <script>
@@ -837,6 +927,7 @@
         spaceBetween: 30,
         mousewheel: true,
       });
+      AOS.init();
     </script>
   </body>
 </html>

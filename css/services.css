@@ -18,6 +18,7 @@
   --third-color: #455a64;
   --forth-color: #ffffff;
 }
+html,
 body {
   font-family: clarity city;
   overflow-x: hidden;
@@ -44,6 +45,9 @@ a {
   text-wrap: nowrap;
   text-decoration: none;
   display: inline-block;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Header Up Section */
@@ -214,6 +218,19 @@ ul > li > a {
   font-size: 16px;
   color: var(--forth-color);
   text-wrap: nowrap;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #ffffff 50%, #ff3434 50%);
+  background-size: 200% auto;
+  background-position: 0% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s ease;
+}
+
+ul > li > a:hover {
+  background-position: 100% 100%;
 }
 .nav-btn {
   gap: 22px;
@@ -224,10 +241,39 @@ ul > li > a {
   min-height: 28px;
 }
 .nav-btn1 {
+  display: inline-block;
+  padding: 19px 68px;
+  font-size: 18px;
+  font-weight: 600;
   color: var(--forth-color);
   background: var(--secondary-color);
-  padding: 19px 68px;
   border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.nav-btn1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.nav-btn1:hover::before {
+  left: 125%;
+}
+
+.nav-btn1:hover {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(255, 52, 52, 0.5);
 }
 .nav-logo > a > img {
   width: 100%;
@@ -275,6 +321,7 @@ ul > li > a {
   justify-content: center;
   overflow: hidden;
   text-align: center;
+  margin-bottom: 100px;
 }
 .banner-sec::after {
   content: "";
@@ -291,10 +338,7 @@ h1 {
   font-size: 65px;
   font-weight: bold;
   z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: sticky;
 }
 /* Services Section */
 .services-sec {
@@ -320,7 +364,7 @@ h1 {
 }
 .card {
   /* flex: 0 0 350px; */
-  width: 80%;
+  width: 100%;
   background: white;
   border-radius: 8px;
   padding: 20px;
@@ -381,10 +425,81 @@ h1 {
   background: var(--secondary-color);
   color: var(--forth-color);
 }
+.schedule {
+  border: 1px solid var(--secondary-color);
+  display: inline-block;
+  padding: 19px 68px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--forth-color);
+  background: var(--secondary-color);
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.schedule::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.schedule:hover::before {
+  left: 125%;
+}
+
+.schedule:hover {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(255, 52, 52, 0.5);
+}
 
 .browse {
   border: 1px solid var(--primary-color);
   background: var(--forth-color);
+}
+.browse {
+  display: inline-block;
+  padding: 14px 48px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.browse::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(66, 50, 50, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.browse:hover::before {
+  left: 125%;
+}
+
+.browse:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(58, 41, 41, 0.5);
 }
 /* Why Choose Us Section */
 .choose-sec {
@@ -457,16 +572,12 @@ h1 {
   margin-top: 25px;
   background: var(--secondary-color);
   color: white;
-  border: none;
   padding: 12px 20px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
 }
 
-.why-content button:hover {
-  background: var(--secondary-color);
-}
 /* Plan Section */
 .plan-sec {
   margin-bottom: 100px;
@@ -548,6 +659,42 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
+}
+.subscribe-btn {
+  border: 1px solid var(--secondary-color);
+  display: inline-block;
+  padding: 19px 68px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--forth-color);
+  background: var(--secondary-color);
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.subscribe-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.subscribe-btn:hover::before {
+  left: 125%;
+}
+
+.subscribe-btn:hover {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(255, 52, 52, 0.5);
 }
 
 /* Slider Section */
@@ -671,9 +818,65 @@ footer {
   padding: 10px;
   background: var(--secondary-color);
   color: var(--forth-color);
-  border: none;
+  border: 1px solid var(--secondary-color);
   border-radius: 4px;
   font-weight: 600;
+}
+.footer-btn {
+  display: inline-block;
+  padding: 19px 68px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--forth-color);
+  background: var(--secondary-color);
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.footer-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.footer-btn:hover::before {
+  left: 125%;
+}
+
+.footer-btn:hover {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(255, 52, 52, 0.5);
+}
+.footer-icon {
+  color: #ffffff;
+  background-color: #f44336;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 10px;
+}
+.footer-social > li > a {
+  font-size: 16px;
+  color: var(--forth-color);
+  text-wrap: nowrap;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #ffffff 50%, #ff3434 50%);
+  background-size: 200% auto;
+  background-position: 0% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--forth-color);
+  transition: background-position 0.4s ease;
 }
 
 @media screen and (max-width: 1200px) {
@@ -698,6 +901,7 @@ footer {
     top: 100px;
     left: 0;
     right: 0;
+    z-index: 11;
     flex-direction: column;
     background-color: rgba(120, 108, 108, 0.3);
     backdrop-filter: blur(10px);
