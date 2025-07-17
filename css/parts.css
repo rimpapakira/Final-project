@@ -837,7 +837,8 @@ footer {
     gap: 25px;
   }
   .nav-right > .nav-btn {
-    display: none;
+    flex-direction: column;
+    
   }
 }
 @media screen and (max-width: 992px) {

@@ -515,7 +515,8 @@ h1 {
     gap: 25px;
   }
   .nav-right > .nav-btn {
-    display: none;
+    flex-direction: column;
+    
   }
 }
 

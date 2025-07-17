@@ -923,7 +923,7 @@ footer {
     gap: 25px;
   }
   .nav-right > .nav-btn {
-    display: none;
+    flex-direction: column;
   }
 
   .step-number {

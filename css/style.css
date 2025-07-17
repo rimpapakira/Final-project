@@ -1498,7 +1498,7 @@ footer {
     gap: 25px;
   }
   .nav-right > .nav-btn {
-    display: none;
+    flex-direction: column;
   }
   /* Banner Section */
   .col-6 {
