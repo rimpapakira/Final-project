@@ -121,7 +121,7 @@ body::-webkit-scrollbar {
 .location-modal {
   background: #fff;
   color: #000;
-  width: 315px;
+  width: 60%;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -155,6 +155,9 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .location-card {

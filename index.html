@@ -127,6 +127,7 @@
           <div class="nav-logo">
             <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
           </div>
+          <input type="checkbox" id="dash" style="display: none;" />
           <label for="dash" class="icon">
             <i class="fa-solid fa-bars"></i>
           </label>
@@ -148,7 +149,32 @@
               <div class="cart">
                 <a href="./cart.html"><img src="./assets/cart.png" alt="" /></a>
               </div>
-              <a class="nav-btn1" href="./login.html">Log In</a>
+              <a class="nav-btn1" href="#" onclick="openLogin(event)">Log In</a>
+
+              <div class="overlay" id="overlay">
+                <div class="login-box">
+                  <span class="close-btn" onclick="closeLogin()">&times;</span>
+                  <h2>Log In</h2>
+                  <p>How to i get started lorem ipsum dolor at?</p>
+                  <input type="text" placeholder="User Name *" />
+                  <input type="password" placeholder="Password *" />
+                  <div class="forgot"><a href="#">Forget Password?</a></div>
+                  <button class="signin">Log In</button>
+                  <div class="or-divider">Or</div>
+                  <div class="social-button">
+                    <img
+                      src="https://img.icons8.com/color/20/google-logo.png"
+                      alt=""
+                    />Login with Google
+                  </div>
+                  <div class="social-button">
+                    <img
+                      src="https://img.icons8.com/ios-filled/20/3b5998/facebook-new.png"
+                      alt=""
+                    />Login with Facebook
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </nav>

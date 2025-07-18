@@ -20,6 +20,22 @@ const menu = document.querySelector(".icon");
 menu.addEventListener("click", () => {
   navRight.classList.toggle("active");
 });
+// 
+const checkbox = document.getElementById('dash');
+    const icon = document.querySelector('label.icon i');
+
+    checkbox.addEventListener('change', () => {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+// 
+function openLogin(e) {
+  e.preventDefault();
+  document.getElementById("overlay").style.display = "flex";
+}
+function closeLogin() {
+  document.getElementById("overlay").style.display = "none";
+}
 
 //
 const track = document.getElementById("logoTrack");

@@ -20,6 +20,22 @@ const menu = document.querySelector(".icon");
 menu.addEventListener("click", () => {
   navRight.classList.toggle("active");
 });
+//
+const checkbox = document.getElementById("dash");
+const icon = document.querySelector("label.icon i");
+
+checkbox.addEventListener("change", () => {
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+});
+//
+function openLogin(e) {
+  e.preventDefault();
+  document.getElementById("overlay").style.display = "flex";
+}
+function closeLogin() {
+  document.getElementById("overlay").style.display = "none";
+}
 
 // Close navbar on mobile after clicking a link
 document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
@@ -38,7 +54,8 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   this.reset();
 });
 
-// 
+//
 
 function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });}
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
