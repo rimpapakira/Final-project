@@ -32,9 +32,11 @@ const checkbox = document.getElementById('dash');
 function openLogin(e) {
   e.preventDefault();
   document.getElementById("overlay").style.display = "flex";
+  document.body.classList.add("no-scroll");
 }
 function closeLogin() {
   document.getElementById("overlay").style.display = "none";
+  document.body.classList.remove("no-scroll");
 }
 
 //
