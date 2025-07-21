@@ -57,11 +57,12 @@ body::-webkit-scrollbar {
 }
 .top-nav-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .top-nav-left {
+  justify-content: center;
   display: flex;
   align-items: center;
   gap: 22px;
@@ -71,6 +72,7 @@ body::-webkit-scrollbar {
 }
 
 .top-nav-left > a {
+  justify-content: center;
   display: flex;
   align-items: center;
   gap: 11px;

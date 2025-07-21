@@ -133,28 +133,35 @@
           <div class="nav-logo">
             <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
           </div>
-         <input type="checkbox" id="dash" style="display: none;" />
-          <label for="dash" class="icon">
+          <input type="checkbox" id="dash" style="display: none" />
+          <label class="icon" onclick="toggleNav(this)" id="menuIcon">
             <i class="fa-solid fa-bars"></i>
           </label>
 
-          <div class="nav-right">
+          <div class="nav-right" id="navRight">
+            <div class="mobile-close" onclick="closeNav()">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
             <ul>
-              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html" onclick="closeNav()">Home</a></li>
               <li>
-                <a href="./parts.html">Shop now</a>
+                <a href="./services.html" onclick="closeNav()">Service</a>
               </li>
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./contact.html">Contact Us</a></li>
-              <li><a href="./services.html">Blog</a></li>
+              <li>
+                <a href="./parts.html" onclick="closeNav()">Spare Parts</a>
+              </li>
+              <li><a href="./about.html" onclick="closeNav()">Abouts</a></li>
+              <li><a href="./contact.html" onclick="closeNav()">Contact</a></li>
             </ul>
             <div class="nav-btn">
-              <div class="search">
+              <div class="search" onclick="closeNav()">
                 <a href=""><img src="./assets/search.png" alt="" /></a>
               </div>
-              <div class="cart">
+              <div class="cart" onclick="closeNav()">
                 <a href="./cart.html"><img src="./assets/cart.png" alt="" /></a>
               </div>
+            </div>
+            <div>
               <a class="nav-btn1" href="#" onclick="openLogin(event)">Log In</a>
 
               <div class="overlay" id="overlay">

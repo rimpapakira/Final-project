@@ -14,20 +14,22 @@ function selectLocation(name) {
 }
 // navbar
 
-const navRight = document.querySelector(".nav-right");
-const menu = document.querySelector(".icon");
+function toggleNav() {
+  document.getElementById("navRight").classList.add("active");
+}
 
-menu.addEventListener("click", () => {
-  navRight.classList.toggle("active");
-});
-//
-const checkbox = document.getElementById("dash");
-const icon = document.querySelector("label.icon i");
+function closeNav() {
+  document.getElementById("navRight").classList.remove("active");
+}
 
-checkbox.addEventListener("change", () => {
-  icon.classList.toggle("fa-bars");
-  icon.classList.toggle("fa-times");
-});
+function openLogin(e) {
+  e.preventDefault();
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeLogin() {
+  document.getElementById("overlay").classList.remove("active");
+}
 //
 function openLogin(e) {
   e.preventDefault();

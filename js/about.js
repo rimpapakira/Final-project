@@ -13,21 +13,22 @@ function selectLocation(name) {
   closeModal();
 }
 // navbar
+function toggleNav() {
+  document.getElementById("navRight").classList.add("active");
+}
 
-const navRight = document.querySelector(".nav-right");
-const menu = document.querySelector(".icon");
+function closeNav() {
+  document.getElementById("navRight").classList.remove("active");
+}
 
-menu.addEventListener("click", () => {
-  navRight.classList.toggle("active");
-});
-//
-const checkbox = document.getElementById("dash");
-const icon = document.querySelector("label.icon i");
+function openLogin(e) {
+  e.preventDefault();
+  document.getElementById("overlay").classList.add("active");
+}
 
-checkbox.addEventListener("change", () => {
-  icon.classList.toggle("fa-bars");
-  icon.classList.toggle("fa-times");
-});
+function closeLogin() {
+  document.getElementById("overlay").classList.remove("active");
+}
 //
 function openLogin(e) {
   e.preventDefault();

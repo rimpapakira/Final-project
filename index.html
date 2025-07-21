@@ -14,11 +14,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Swiper CSS -->
+    <!-- Splide CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
+
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
@@ -127,28 +128,35 @@
           <div class="nav-logo">
             <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
           </div>
-          <input type="checkbox" id="dash" style="display: none;" />
-          <label for="dash" class="icon">
+          <input type="checkbox" id="dash" style="display: none" />
+          <label class="icon" onclick="toggleNav(this)" id="menuIcon">
             <i class="fa-solid fa-bars"></i>
           </label>
 
-          <div class="nav-right">
+          <div class="nav-right" id="navRight">
+            <div class="mobile-close" onclick="closeNav()">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
             <ul>
-              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html" onclick="closeNav()">Home</a></li>
               <li>
-                <a href="./parts.html">Shop now</a>
+                <a href="./services.html" onclick="closeNav()">Service</a>
               </li>
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./contact.html">Contact Us</a></li>
-              <li><a href="./services.html">Blog</a></li>
+              <li>
+                <a href="./parts.html" onclick="closeNav()">Spare Parts</a>
+              </li>
+              <li><a href="./about.html" onclick="closeNav()">Abouts</a></li>
+              <li><a href="./contact.html" onclick="closeNav()">Contact</a></li>
             </ul>
             <div class="nav-btn">
-              <div class="search">
+              <div class="search" onclick="closeNav()">
                 <a href=""><img src="./assets/search.png" alt="" /></a>
               </div>
-              <div class="cart">
+              <div class="cart" onclick="closeNav()">
                 <a href="./cart.html"><img src="./assets/cart.png" alt="" /></a>
               </div>
+            </div>
+            <div>
               <a class="nav-btn1" href="#" onclick="openLogin(event)">Log In</a>
 
               <div class="overlay" id="overlay">
@@ -384,7 +392,9 @@
 
               <div class="features">
                 <div class="feature" data-aos="zoom-in-up">
-                  <img src="./assets/Experienced-Machanics.png" alt="" />
+                  <div class="feature-img">
+                    <img src="./assets/Experienced-Machanics.png" alt="" />
+                  </div>
                   <div class="feature-text">
                     <h4>Experienced Mechanics</h4>
                     <p>
@@ -396,7 +406,9 @@
                 </div>
 
                 <div class="feature" data-aos="zoom-in-up">
-                  <img src="./assets/Quality-Service.png" alt="" />
+                  <div class="feature-img">
+                    <img src="./assets/Quality-Service.png" alt="" />
+                  </div>
                   <div class="feature-text">
                     <h4>24/7 Quality Service</h4>
                     <p>
@@ -408,7 +420,9 @@
                 </div>
 
                 <div class="feature" data-aos="zoom-in-up">
-                  <img src="./assets/10+years-of-experience.png" alt="" />
+                  <div class="feature-img">
+                    <img src="./assets/10+years-of-experience.png" alt="" />
+                  </div>
                   <div class="feature-text">
                     <h4>10+ years of experience</h4>
                     <p>
@@ -421,7 +435,7 @@
               </div>
 
               <button
-                class="schedule"
+                class="schedule btn1"
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom"
               >
@@ -511,9 +525,9 @@
           Service Your Car In<br />Just Three Easy Steps
         </h2>
 
-        <div class="steps-container">
+        <div class="row steps-container">
           <!-- Step 1 -->
-          <div class="step-card" data-aos="zoom-in-right">
+          <div class="col3 step-card" data-aos="zoom-in-right">
             <div class="step-header">
               <div class="step-number">1</div>
               <div class="step-line"></div>
@@ -530,7 +544,7 @@
           </div>
 
           <!-- Step 2 -->
-          <div class="step-card" data-aos="zoom-in">
+          <div class="col3 step-card" data-aos="zoom-in">
             <div class="step-header">
               <div class="step-number">2</div>
               <div class="step-line"></div>
@@ -550,7 +564,7 @@
           </div>
 
           <!-- Step 3 -->
-          <div class="step-card" data-aos="zoom-in-left">
+          <div class="col3 step-card" data-aos="zoom-in-left">
             <div class="step-header">
               <div class="step-number">3</div>
               <div class="step-line"></div>
@@ -583,7 +597,7 @@
           Choose the Right Plan for Your Car
         </h2>
 
-        <div class="row">
+        <div class="row plan-card">
           <!-- Basic Plan -->
           <div class="col-4">
             <div class="card2" data-aos="flip-left">
@@ -660,8 +674,8 @@
         <h2 data-aos="fade-up" data-aos-duration="4000">
           Our Track Record Speaks for Itself
         </h2>
-        <div class="row">
-          <div class="col-4">
+        <div class="row record-card">
+          <div class="col4">
             <div class="achievement-card" data-aos="flip-left">
               <div class="icon1">
                 <img src="./assets/calendar.png" alt="" />
@@ -673,7 +687,7 @@
               </p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col4">
             <div class="achievement-card" data-aos="flip-up">
               <div class="icon1"><img src="./assets/happy.png" alt="" /></div>
               <h3>50k+ Happy Clients</h3>
@@ -683,7 +697,7 @@
               </p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col4">
             <div class="achievement-card" data-aos="flip-right">
               <div class="icon1"><img src="./assets/star.png" alt="" /></div>
               <h3>99% Customer Satisfaction</h3>
@@ -710,71 +724,106 @@
           What our clients say about us
         </h2>
       </div>
-      <div>
-        <div class="swiper" id="mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-card" data-aos="flip-up">
-                <img
-                  src="./assets/testimonials-pic-1.png"
-                  alt="Vanessa Taylor"
-                />
-                <h3>Vanessa Taylor</h3>
-                <p class="role">Rider</p>
-                <p class="text">
+      <div class="splide" id="autoScrollSlider">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="testimonial-card">
+                <div class="testimonial-man">
+                  <img
+                    src="./assets/testimonials-pic-1.png"
+                    alt="testimonial person"
+                  />
+                </div>
+                <h5 class="testimonial-name">Vanessa Taylor</h5>
+                <p class="testimonial-profession">Rider</p>
+                <p class="testimonial-content">
                   Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
                   velit vitae eget aliquam risus phasellus risus. Morbi eget
                   semper.
                 </p>
-                <div class="stars">★★★★★</div>
+                <div class="icon-star">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card" data-aos="flip-down">
-                <img
-                  src="./assets/testimonials-pic-2.png"
-                  alt="Evan Daugherty"
-                />
-                <h3>Evan Daugherty</h3>
-                <p class="role">Rider</p>
-                <p class="text">
+            </li>
+            <li class="splide__slide">
+              <div class="testimonial-card">
+                <div class="testimonial-man">
+                  <img
+                    src="./assets/testimonials-pic-2.png"
+                    alt="testimonial person"
+                  />
+                </div>
+                <h5 class="testimonial-name">David Benioff</h5>
+                <p class="testimonial-profession">Rider</p>
+                <p class="testimonial-content">
                   Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
                   velit vitae eget aliquam risus phasellus risus. Morbi eget
                   semper.
                 </p>
-                <div class="stars">★★★★★</div>
+                <div class="icon-star">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card" data-aos="flip-up">
-                <img src="./assets/testimonials-pic-3.png" alt="Bryan Cogman" />
-                <h3>Bryan Cogman</h3>
-                <p class="role">Rider</p>
-                <p class="text">
+            </li>
+            <li class="splide__slide">
+              <div class="testimonial-card">
+                <div class="testimonial-man">
+                  <img
+                    src="./assets/testimonials-pic-3.png"
+                    alt="testimonial person"
+                  />
+                </div>
+                <h5 class="testimonial-name">Evan Daugherty</h5>
+                <p class="testimonial-profession">Rider</p>
+                <p class="testimonial-content">
                   Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
                   velit vitae eget aliquam risus phasellus risus. Morbi eget
                   semper.
                 </p>
-                <div class="stars">★★★★★</div>
+                <div class="icon-star">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card" data-aos="flip-down">
-                <img
-                  src="./assets/testimonials-pic-4.png"
-                  alt="David Benioff"
-                />
-                <h3>David Benioff</h3>
-                <p class="role">Rider</p>
-                <p class="text">
+            </li>
+            <li class="splide__slide">
+              <div class="testimonial-card">
+                <div class="testimonial-man">
+                  <img
+                    src="./assets/testimonials-pic-4.png"
+                    alt="testimonial person"
+                  />
+                </div>
+                <h5 class="testimonial-name">Bryan Cogman</h5>
+                <p class="testimonial-profession">Rider</p>
+                <p class="testimonial-content">
                   Lorem ipsum dolor sit amet consectetur. Quam aliquam egestas
                   velit vitae eget aliquam risus phasellus risus. Morbi eget
                   semper.
                 </p>
-                <div class="stars">★★★★★</div>
+                <div class="icon-star">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -801,6 +850,7 @@
                 pharetra. Adipiscing habitant in gravida sem. Nulla.
               </p>
               <input
+                class="emailtext"
                 type="email"
                 placeholder="Enter Your E-Mail"
                 name=""
@@ -821,7 +871,7 @@
         <div class="row">
           <div class="col-3">
             <div class="footer-cont">
-              <div class="nav-logo">
+              <div class="footer-logo">
                 <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
               </div>
               <p class="footer-p">
@@ -830,7 +880,12 @@
               </p>
               <h2>Subscribe to our newsletter</h2>
               <form class="footer-form">
-                <input type="email" placeholder="Enter Your E-Mail" required />
+                <input
+                  type="email"
+                  id="footer-email"
+                  placeholder="Enter Your E-Mail"
+                  required
+                />
                 <button type="submit" class="footer-btn">Subscribe Now</button>
               </form>
             </div>
@@ -944,18 +999,23 @@
     </footer>
 
     <!-- Splide JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- Include Splide Autoscroll Extension -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.1/dist/js/splide-extension-auto-scroll.min.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JS -->
     <script src="./js/index.js"></script>
     <script>
-      var swiper = new Swiper("#mySwiper", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 30,
-        mousewheel: true,
-      });
+      function openLogin(e) {
+        e.preventDefault();
+        document.getElementById("overlay").classList.add("active");
+      }
+
+      function closeLogin() {
+        document.getElementById("overlay").classList.remove("active");
+      }
+
       AOS.init();
     </script>
   </body>

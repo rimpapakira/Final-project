@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 }
 .top-nav-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -68,6 +68,7 @@ body::-webkit-scrollbar {
   flex-wrap: wrap;
   font-size: 15px;
   font-weight: 400;
+  justify-content: center;
 }
 
 .top-nav-left > a {
@@ -81,7 +82,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: "Montserrat", sans-serif;
+  justify-content: center;
 }
 
 .top-nav-right > p > i {

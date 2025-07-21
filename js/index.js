@@ -14,20 +14,62 @@ function selectLocation(name) {
 }
 // navbar
 
-const navRight = document.querySelector(".nav-right");
-const menu = document.querySelector(".icon");
+// const navRight = document.querySelector(".nav-right");
+// const menu = document.querySelector(".icon");
 
-menu.addEventListener("click", () => {
-  navRight.classList.toggle("active");
-});
+// menu.addEventListener("click", () => {
+//   navRight.classList.toggle("active");
+// });
+// function toggleNav(el) {
+//   const nav = document.getElementById("navRight");
+//   const icon = el.querySelector("i");
+//   nav.classList.toggle("active");
+//   icon.classList.toggle("fa-bars");
+//   icon.classList.toggle("fa-xmark");
+// }
+
+// function closeNav() {
+//   const nav = document.getElementById("navRight");
+//   const icon = document.querySelector("#menuIcon i");
+//   nav.classList.remove("active");
+//   icon.classList.remove("fa-xmark");
+//   icon.classList.add("fa-bars");
+// }
+
+// function openLogin(e) {
+//   e.preventDefault();
+//   document.getElementById("overlay").classList.add("active");
+// }
+
+// function closeLogin() {
+//   document.getElementById("overlay").classList.remove("active");
+// }
+// //
+// function closeNav() {
+//   document.getElementById("navRight").classList.remove("active");
+// }
+
+// function openLogin(e) {
+//   e.preventDefault();
+//   document.getElementById("overlay").classList.add("active");
+// }
 //
-const checkbox = document.getElementById("dash");
-const icon = document.querySelector("label.icon i");
+function toggleNav() {
+  document.getElementById("navRight").classList.add("active");
+}
 
-checkbox.addEventListener("change", () => {
-  icon.classList.toggle("fa-bars");
-  icon.classList.toggle("fa-times");
-});
+function closeNav() {
+  document.getElementById("navRight").classList.remove("active");
+}
+
+function openLogin(e) {
+  e.preventDefault();
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeLogin() {
+  document.getElementById("overlay").classList.remove("active");
+}
 //
 
 function openLogin(e) {
@@ -70,41 +112,22 @@ cards.forEach((card, index) => {
   });
 });
 // testimonial
-
-const track = document.getElementById("sliderTrack");
-let currentIndex = 0;
-
-function getSlideWidth() {
-  return track.children[0].offsetWidth + 20;
-}
-
-function updateSlider() {
-  const slideWidth = getSlideWidth();
-  const containerWidth = document.querySelector(".slider").offsetWidth;
-  const offset = (containerWidth - slideWidth) / 2;
-  track.style.transition = "transform 0.5s ease-in-out";
-  track.style.transform = `translateX(${
-    -currentIndex * slideWidth + offset
-  }px)`;
-}
-
-function nextSlide() {
-  currentIndex++;
-  if (currentIndex >= track.children.length) {
-    currentIndex = 0;
-  }
-  updateSlider();
-}
-
-function startAutoSlide() {
-  setInterval(nextSlide, 3000);
-}
-
-window.addEventListener("resize", updateSlider);
-
-updateSlider();
-startAutoSlide();
-
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#autoScrollSlider", {
+    type: "loop",
+    perPage: 4,
+    gap: "1rem",
+    arrows: false,
+    pagination: false,
+    autoScroll: {
+      speed: 1, // lower = slower scroll
+    },
+    breakpoints: {
+      768: { perPage: 2 },
+      480: { perPage: 1 },
+    },
+  }).mount(window.splide.Extensions);
+});
 //
 
 function scrollToTop() {

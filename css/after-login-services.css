@@ -58,11 +58,12 @@ body::-webkit-scrollbar {
 }
 .top-nav-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .top-nav-left {
+  justify-content: center;
   display: flex;
   align-items: center;
   gap: 22px;
@@ -82,7 +83,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: "Montserrat", sans-serif;
+  justify-content: center;
 }
 
 .top-nav-right > p > i {
