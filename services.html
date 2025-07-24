@@ -127,11 +127,18 @@
           <div class="nav-logo">
             <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
           </div>
-          <input type="checkbox" id="dash" style="display: none" />
-          <label class="icon" onclick="toggleNav(this)" id="menuIcon">
-            <i class="fa-solid fa-bars"></i>
-          </label>
-
+          <div class="nav-btn small">
+            <div class="search" onclick="closeNav()">
+              <a href=""><img src="./assets/search.png" alt="" /></a>
+            </div>
+            <div class="cart" onclick="closeNav()">
+              <a href="./cart.html"><img src="./assets/cart.png" alt="" /></a>
+            </div>
+            <input type="checkbox" id="dash" style="display: none" />
+            <label class="icon" onclick="toggleNav(this)" id="menuIcon">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
           <div class="nav-right" id="navRight">
             <div class="mobile-close" onclick="closeNav()">
               <i class="fa-solid fa-xmark"></i>
@@ -147,7 +154,7 @@
               <li><a href="./about.html" onclick="closeNav()">Abouts</a></li>
               <li><a href="./contact.html" onclick="closeNav()">Contact</a></li>
             </ul>
-            <div class="nav-btn">
+            <div class="nav-btn big">
               <div class="search" onclick="closeNav()">
                 <a href=""><img src="./assets/search.png" alt="" /></a>
               </div>
@@ -360,7 +367,7 @@
     <section class="choose-sec">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-6 choose-sec-img">
             <div
               class="choose-img"
               data-aos="fade-right"
@@ -380,14 +387,16 @@
                 Why Us
               </h3>
               <h2 data-aos="fade-up" data-aos-duration="4000">Why Choose Us</h2>
-              <p>
+              <p data-aos="fade-down-left">
                 Lorem ipsum dolor sit amet consectetur. Massa varius ultrices
                 pretium fusce massa maecenas. Arcu amet nunc pharetra proin.
               </p>
 
               <div class="features">
                 <div class="feature" data-aos="zoom-in-up">
-                  <img src="./assets/Experienced-Machanics.png" alt="" />
+                  <div class="feature-img">
+                    <img src="./assets/Experienced-Machanics.png" alt="" />
+                  </div>
                   <div class="feature-text">
                     <h4>Experienced Mechanics</h4>
                     <p>
@@ -399,7 +408,9 @@
                 </div>
 
                 <div class="feature" data-aos="zoom-in-up">
-                  <img src="./assets/Quality-Service.png" alt="" />
+                  <div class="feature-img">
+                    <img src="./assets/Quality-Service.png" alt="" />
+                  </div>
                   <div class="feature-text">
                     <h4>24/7 Quality Service</h4>
                     <p>
@@ -411,7 +422,9 @@
                 </div>
 
                 <div class="feature" data-aos="zoom-in-up">
-                  <img src="./assets/10+years-of-experience.png" alt="" />
+                  <div class="feature-img">
+                    <img src="./assets/10+years-of-experience.png" alt="" />
+                  </div>
                   <div class="feature-text">
                     <h4>10+ years of experience</h4>
                     <p>
@@ -424,7 +437,7 @@
               </div>
 
               <button
-                class="schedule"
+                class="schedule btn1"
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom"
               >
@@ -449,7 +462,7 @@
           Choose the Right Plan for Your Car
         </h2>
 
-        <div class="row">
+        <div class="row plan-card">
           <!-- Basic Plan -->
           <div class="col-4">
             <div class="card2" data-aos="flip-left">
@@ -572,7 +585,7 @@
         <div class="row">
           <div class="col-3">
             <div class="footer-cont">
-              <div class="nav-logo">
+              <div class="footer-logo">
                 <a href=""><img src="./assets/nav-logo.png" alt="" /></a>
               </div>
               <p class="footer-p">
@@ -581,7 +594,12 @@
               </p>
               <h2>Subscribe to our newsletter</h2>
               <form class="footer-form">
-                <input type="email" placeholder="Enter Your E-Mail" required />
+                <input
+                  type="email"
+                  id="footer-email"
+                  placeholder="Enter Your E-Mail"
+                  required
+                />
                 <button type="submit" class="footer-btn">Subscribe Now</button>
               </form>
             </div>
