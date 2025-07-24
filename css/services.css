@@ -484,6 +484,9 @@ h1 {
   position: sticky;
 }
 /* Services Section */
+.col-6{
+  width: 50%;
+}
 .services-sec {
   margin-bottom: 100px;
 }
