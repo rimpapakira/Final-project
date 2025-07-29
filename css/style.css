@@ -642,14 +642,14 @@ input::placeholder {
   margin-top: 15px;
 }
 .col-4 {
-  width: 32.3333%;
+  width: 33.3333%;
 }
 .card {
   width: 100%;
   background: white;
   border-radius: 8px;
   padding: 20px;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
@@ -690,6 +690,9 @@ input::placeholder {
 
 .card a:hover {
   text-decoration: underline;
+}
+.location {
+  width: 43%;
 }
 
 .actions {
@@ -902,7 +905,10 @@ input::placeholder {
   border-radius: 6px;
   margin-bottom: 10px;
 }
-
+.price-div {
+  display: flex;
+  justify-content: space-between;
+}
 .price {
   font-weight: 700;
   font-size: 18px;
@@ -1229,6 +1235,7 @@ input::placeholder {
   color: var(--third-color);
   position: relative;
   padding-left: 25px;
+  font-size: 18px;
 }
 .subscribe-btn {
   background: var(--secondary-color);
@@ -1512,10 +1519,19 @@ input::placeholder {
 }
 
 /* Footer Section */
-.col-3 {
+.col-40 {
+  width: 40%;
+}
+
+.col-15 {
+  width: 15%;
+}
+
+.col-25 {
   width: 25%;
-  display: flex;
-  flex-direction: column;
+}
+.col-20 {
+  width: 20%;
 }
 footer {
   background: var(--primary-color);
@@ -1610,6 +1626,24 @@ footer {
   border-radius: 50px;
   padding: 10px;
 }
+.list-heading {
+  font-size: 20px;
+  padding-top: 60px;
+  padding-bottom: 25px;
+}
+.col-15 > ul,
+.col-20 > ul {
+  padding: 0;
+}
+.col-15 > ul > li > a {
+  margin-bottom: 8px;
+}
+.col-20 > ul > li > a {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .footer-social > li > a {
   font-size: 16px;
   color: var(--forth-color);
@@ -1624,6 +1658,26 @@ footer {
   -webkit-text-fill-color: var(--forth-color);
   transition: background-position 0.4s ease;
 }
+.footer-buttom {
+  max-width: 1200px;
+  margin: auto;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #aaa;
+}
+.footer-right {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.footer-right > a {
+  color:#aaa;
+}
 .float-btn {
   position: fixed;
   bottom: 20px;
@@ -1632,8 +1686,8 @@ footer {
   color: var(--primary-color);
   border: none;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1673,6 +1727,7 @@ footer {
   }
   .nav-right {
     display: none;
+    align-items: center;
     z-index: 11;
     flex-direction: column;
     background-color: rgba(120, 108, 108, 0.3);
@@ -1701,7 +1756,6 @@ footer {
     width: 300px;
     height: 100vh;
     flex-direction: column;
-    align-items: start;
     padding: 20px;
     transition: right 0.3s ease-in-out;
   }
@@ -1740,7 +1794,7 @@ footer {
   }
   /* Why Choose Us Section */
   .why-content {
-    padding: 20px;
+    /* padding: 20px; */
     align-items: center;
   }
   /* Services Step Section */
@@ -1831,13 +1885,7 @@ footer {
     width: 50%;
   }
   /* Footer Section */
-  .col-3 {
-    width: 50%;
-    margin-bottom: 15px;
-  }
-  .list-heading {
-    padding-top: 10px;
-  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1893,6 +1941,12 @@ footer {
     margin-bottom: 60px;
   }
   /* Footer Section */
+  .col-40{
+    width: 100%;
+  }
+  .col-15, .col-20, .col-25{
+    width: 33.3333%;
+  }
 }
 @media screen and (max-width: 576px) {
   /* Header Up Section */
@@ -1951,6 +2005,13 @@ footer {
     padding-left: 4.5rem;
     padding-bottom: 2.5rem;
   }
+  /* Footer Section */
+  .col-40{
+    width: 100%;
+  }
+  .col-15, .col-20, .col-25{
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1959,14 +2020,16 @@ footer {
     top: 0;
   }
   /* Header Section */
-  .nav-btn{
+  .nav-btn {
     gap: 5px;
   }
-  .cart, .search{
+  .cart,
+  .search {
     padding: 5px;
     margin-right: 5px;
   }
-  .cart>a, .search>a{
+  .cart > a,
+  .search > a {
     width: 20px;
     height: 20px;
   }
@@ -1990,6 +2053,9 @@ footer {
   }
   .personal {
     flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
   }
   .input {
     flex-direction: column;
@@ -1999,6 +2065,9 @@ footer {
   }
   .banner-cont > p {
     font-size: 15px;
+  }
+  .location {
+    width: 100%;
   }
   /* Services Section */
   .services-sec {

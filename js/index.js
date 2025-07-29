@@ -83,12 +83,6 @@ function closeLogin() {
 }
 // service
 
-// Products
-function scrollSlider(direction) {
-  const slider = document.getElementById("slider1");
-  const cardWidth = slider.querySelector(".card1").offsetWidth + 20;
-  slider.scrollLeft += direction * cardWidth;
-}
 // step
 const cards = document.querySelectorAll(".step-card");
 
