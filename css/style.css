@@ -889,10 +889,18 @@ input::placeholder {
   font-size: 20px;
   text-align: center;
 }
-
+.products-row{
+  justify-content: center;
+  align-items: center;
+}
+.products-sec>div>div>.col-3{
+  padding-bottom: 10px;
+}
+.col-3{
+  width: 25%;
+}
 .card1 {
   flex: 0 0 300px;
-  margin: 0 10px;
   background: var(--forth-color);
   border-radius: 8px;
   padding: 10px;
@@ -1884,6 +1892,9 @@ footer {
   .col-4 {
     width: 50%;
   }
+  .col-3{
+  width: 50%;
+}
   /* Footer Section */
 
 }
